@@ -1,0 +1,27 @@
+{//3-Escreva um algoritmo que permita a leitura dos nomes de 10 pessoas e armazene os nomeslidos em um vetor.
+ //Após isto, o algoritmo deve permitir a leitura de mais 1 nome qualquer de pessoa e depois escrever a mensagem
+ //ACHEI, se o nome estiver entre os 10 nomes lidos anteriormente (guardados no vetor), ou NÃO ACHEI caso contrário.
+    string[] nomes = new string[10];
+    string novoNome;
+
+    for (int i = 0; i < 10; i++)
+    {
+        Console.Write("Digite o " + (i + 1) + "º nome : ");
+        nomes[i] = Console.ReadLine().ToLower();
+
+    }
+    Console.Write("Digite um nome: ");
+    novoNome = Console.ReadLine();
+
+    bool achei = false;
+    foreach (string nome in nomes)
+    {
+        if (nome == novoNome)
+        {
+            achei = true;
+        }
+    }
+    Console.WriteLine(achei ? "ACHEI" : "NÃO ACHEI");
+
+    Console.ReadKey();
+}

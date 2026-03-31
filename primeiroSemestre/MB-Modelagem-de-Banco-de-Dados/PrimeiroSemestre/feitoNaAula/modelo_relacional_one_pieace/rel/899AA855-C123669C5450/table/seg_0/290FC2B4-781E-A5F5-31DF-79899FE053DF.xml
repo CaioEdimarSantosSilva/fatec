@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="290FC2B4-781E-A5F5-31DF-79899FE053DF" name="CREW">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>5DFF3B9C-FD41-FC5E-4039-D55907AA1722</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_crew" id="37392A67-D5A1-5911-499C-53795E3EEEE1">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>E56FA792-93CA-82D8-89D9-A455C6357A12</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_crew" id="601209D2-8683-053D-9CCB-5BAC51BA3C9E">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>87AB62C3-D2B0-3DB2-5FA3-0BFBDB59A478</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_ship_crew" id="6BE8387D-6278-D42E-8090-F7DA74C4D093">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>EF406FD2-EB58-9500-6491-23DDD840F378</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A835D833-36F3-3CCD-FDD6-222F0D20785A" name="CREW_PK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>85B80695-63D5-6A10-D7B4-38E8C135772B</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="37392A67-D5A1-5911-499C-53795E3EEEE1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

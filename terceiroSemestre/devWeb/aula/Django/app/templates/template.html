@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block titulo %} {% endblock%}</title>
+</head>
+<body>
+    <h1><strong>Django baby</strong></h1>
+         <nav>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'categoria' %}">Categorias</a>  
+            <a href="{% url 'addcontato' %}">Contato</a>
+        </nav>
+        <br>
+        <header>
+            
+            <main>
+                {% block conteudo%} {% endblock %}
+            </main>
+        </header>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="19FED273-F192-7A16-44A3-D440B2650E23" name="FRUIT">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>F6D69DF2-E0DD-971F-0E50-F1C6E2D545DD</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_fruit" id="3BE6776A-ECD7-A25B-1228-2E972DF21193">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>C7D1CC9F-AB1B-A25E-7A48-EA96898F9312</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_fruit" id="2EB641FC-0542-F083-3ECB-4E30A3B4B13A">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>65076111-3C15-7181-18F8-344897C965CD</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_type_fruit" id="C6717298-6A96-B7C6-2A59-57292F8C047B">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>D8C159E9-FC49-ED36-17AD-FB197A516AF6</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F3BC73C6-6348-8BDD-AC89-36E00569EB57" name="FRUIT_PK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>9B2CE799-B949-622E-9B6C-CA521D21D43C</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3BE6776A-ECD7-A25B-1228-2E972DF21193"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

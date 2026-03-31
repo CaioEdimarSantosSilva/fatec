@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5DFF3B9C-FD41-FC5E-4039-D55907AA1722" name="CREW">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:45:37 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_crew" id="E56FA792-93CA-82D8-89D9-A455C6357A12">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:46:13 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_crew" id="87AB62C3-D2B0-3DB2-5FA3-0BFBDB59A478">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:46:26 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_ship_crew" id="EF406FD2-EB58-9500-6491-23DDD840F378">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:46:53 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="85B80695-63D5-6A10-D7B4-38E8C135772B" name="CREW PK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:46:23 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E56FA792-93CA-82D8-89D9-A455C6357A12</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

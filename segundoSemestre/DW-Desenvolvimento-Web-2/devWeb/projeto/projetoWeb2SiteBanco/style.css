@@ -1,0 +1,55 @@
+/*
+PALHETA DE CORES
+
+BRANCO = #EDEDED
+AMARELO = #FFB521
+AZUL = #3685FF
+BRANCO AZULADO = #DCEAFF
+AZUL ESCURO = #01337D
+*/
+
+
+
+body{
+    font-family: monospace;
+    background-color: #DCEAFF;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #01337D;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+.conteinerLogo{
+    display: flex;
+    padding: 1em;
+}
+
+.logoTexto{
+    border: 3px solid #DCEAFF;
+    border-radius: 15px;
+    color: #FFB521;
+    padding: 1.6em;
+
+}
+
+nav{
+  padding: 1.5em;
+  
+}
+a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+
+
+
+footer{
+    background-color: #01337D;
+}

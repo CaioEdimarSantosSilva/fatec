@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="78163ED2-3B05-A5D2-9A17-1DCBA4B917A8" containerWithKeyObject="B402FA85-E314-A73E-8B51-F3832FC2F6DA" localFKIndex="55AAD518-4F45-C4BD-1044-F69B96DDB897" name="CHARACTER_HAKI_HAKI_FK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 03:52:27 UTC</createdTime>
+<generatorID>081FFC0D-E5E9-68D3-02A7-AE8ADACD1941</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<referredTableLongName>HAKI</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>4E1C8B67-E4A0-D4CD-777B-342DEBA19F1E</referredTableID>
+<keyObject>9DDD61F3-EF5A-742E-4ECD-B48972052BAD</keyObject>
+<referredKeyID>9DDD61F3-EF5A-742E-4ECD-B48972052BAD</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_haki</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

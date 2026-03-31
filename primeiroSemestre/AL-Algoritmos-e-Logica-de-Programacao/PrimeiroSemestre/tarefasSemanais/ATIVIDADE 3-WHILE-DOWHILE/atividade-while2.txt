@@ -1,0 +1,17 @@
+public class Program
+{
+	public static void Main()
+	{//2-Faça um Programa e Fluxograma que exiba quantas pessoas possuem mais de 18 anos. O algoritmo deverá ler a idade de 10 pessoas.
+		int idade,contadorIdade=0, contador=1;
+		while(contador <= 10){
+			Console.Write("Qual sua idade? ");
+      		idade = Convert.ToInt32(Console.ReadLine());
+			if(idade >= 18){
+				contadorIdade++;
+			}
+			contador++;
+		}
+		Console.WriteLine("Tem " + contadorIdade + " pessoas maiores de 18 anos!");
+		Console.ReadKey();
+	}
+}

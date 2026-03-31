@@ -1,0 +1,21 @@
+{//2-Faça um programa que leia 20 valores no vetor e no final, escreva o maior e o menor valorlido.
+
+    double[] valores = new double[20];
+    double maior = 0, menor = 0;
+    for (int i = 0; i < 20; i++)
+    {
+        Console.Write("Digite um valor: ");
+        valores[i] = Convert.ToDouble(Console.ReadLine());
+    }
+    maior = valores[0];
+    menor = valores[0];
+
+    foreach (double valor in valores)
+    {
+        if(valor > maior) maior = valor;           
+        if(valor < menor) menor = valor;
+    }
+    Console.WriteLine("O maior valor é: " + maior);
+    Console.WriteLine("O menor valor é: " + menor);
+    Console.ReadKey();
+}

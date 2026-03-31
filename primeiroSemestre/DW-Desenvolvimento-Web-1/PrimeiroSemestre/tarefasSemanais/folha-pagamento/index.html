@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folha de Pagamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .formulario {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type='text'],select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #2A7EB9;
+            color: white;
+            border: 1px solid black;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #184f77;
+        }
+        .resultado {
+            background: white;
+            border-left: 4px solid #5DCE94;
+            border-radius: 8px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h2>Folha de Pagamento</h2>
+    <div class="container">
+        <form>
+            <div class="formulario">
+                <label for="nome">Nome do Funcionário:</label>
+                <input type="text" id="nome">
+            </div>
+            <div class="formulario">
+                <label for="cargo">Cargo:</label>
+                <select id="cargo">
+                    <option value="">Selecione</option>
+                    <option value="8000">Gerente — R$ 8.000</option>
+                    <option value="5000">Analista — R$ 5.000</option>
+                    <option value="3000">Assistente — R$ 3.000</option>
+                </select>
+            </div>
+            <div class="formulario">
+                <legend>Benefícios:</legend>
+                <input type="checkbox" class="beneficio" value="300"> Vale-Transporte: R$ +300 <br>
+                <input type="checkbox" class="beneficio" value="400"> Plano de Saúde: R$ +400
+            </div>
+            <div class="formulario">
+                <legend>Tipo de Contrato:</legend>
+                <input type="radio" name="contrato" value="20%" class="contrato"> CLT: desconto de 20% sobre o salário
+                base <br>
+                <input type="radio" name="contrato" value="5%" class="contrato"> PJ: desconto de 5% sobre o salário base
+            </div>
+            <button type="button" onclick="cadastrar()">Calcular Folha</button>
+        </form>
+    </div>
+    <br>
+    <div class="resultado" id="resultado"></div>
+    <script>
+        const cadastrar = () => {
+            const resultado = document.getElementById("resultado");
+            const nome = document.getElementById("nome").value;
+            const cargoSelect = document.getElementById("cargo");
+            const salarioStr = cargoSelect.value;
+            if (!nome || !salarioStr) {
+                resultado.innerHTML = "<b style='color: red;'>Preencha o nome e selecione o cargo.</b>";
+                return;
+            }
+            const salarioBase = parseFloat(salarioStr.replace("R$", "").replace(/\./g, "").replace(",", "."));
+            const beneficios = document.querySelectorAll(".beneficio");
+            let totalBeneficios = 0;
+            beneficios.forEach(b => {
+                if (b.checked) {
+                    const valor = parseFloat(b.value.replace("R$", "").replace(/\./g, "").replace(",", "."));
+                    totalBeneficios += valor;
+                }
+            });
+            const contrato = document.querySelector("input[name='contrato']:checked");
+            if (!contrato) {
+                resultado.innerHTML = "<b style='color: red;'>Selecione o tipo de contrato.</b>";
+                return;
+            }
+            const descontoPercentual = parseFloat(contrato.value.replace("%", ""));
+            const valorDesconto = (salarioBase * descontoPercentual) / 100;
+            const salarioLiquido = salarioBase - valorDesconto + totalBeneficios;
+            resultado.innerHTML = `<div style="padding: 10px; margin-top: 20px; color: black;">
+                                <b>Funcionário:</b> ${nome}<br>
+                                <b>Salário Base:</b> R$ ${salarioBase.toFixed(2)}<br>
+                                <b>Benefícios:</b> R$ ${totalBeneficios.toFixed(2)}<br>
+                                <b>Descontos (${descontoPercentual}%):</b> R$ ${valorDesconto.toFixed(2)}<br>
+                                <b>Salário Líquido:</b> <b style="color: green;">R$ ${salarioLiquido.toFixed(2)}</b></div>`;
+        }
+    </script>
+</body>
+</html>

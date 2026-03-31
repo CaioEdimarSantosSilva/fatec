@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="entered" directorySegmentName="seg_0" id="9AF87473-FB45-1D6A-08D8-D14514385672">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:06 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<sourcePk>85B80695-63D5-6A10-D7B4-38E8C135772B</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>5DFF3B9C-FD41-FC5E-4039-D55907AA1722</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6E4A0B89-90C3-00F3-663C-68A4F08A5B47</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

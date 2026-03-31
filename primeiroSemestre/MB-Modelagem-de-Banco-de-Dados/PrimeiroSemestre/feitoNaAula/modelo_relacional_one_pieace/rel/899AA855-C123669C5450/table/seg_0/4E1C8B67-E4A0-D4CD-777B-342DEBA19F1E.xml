@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4E1C8B67-E4A0-D4CD-777B-342DEBA19F1E" name="HAKI">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>4F2D6126-6596-B077-1EA6-EFABE9E2ECF5</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_haki" id="3E8A377C-35E8-DD17-4F68-102A218E0FC9">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>F0FF385A-B282-2ABB-AC00-960F007F9D2D</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_haki" id="786444F5-B5FA-EC45-F92B-1B4AA396C4E7">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>8DB47027-7E49-677F-3851-B303CD231178</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_type_haki" id="FFC6A2D9-2D98-E3B0-A203-8DC6727AA811">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>DEF303FD-1C0A-551C-6849-2422114119CD</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9DDD61F3-EF5A-742E-4ECD-B48972052BAD" name="HAKI_PK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>2EB0FB05-EF14-B87E-B685-1848C6A457FB</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3E8A377C-35E8-DD17-4F68-102A218E0FC9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

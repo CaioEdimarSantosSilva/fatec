@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="43183FA5-C659-7381-2D38-AB69A68E7251" mainViewID="E11D8B70-3C39-AC6B-937A-817CA505D6F0">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:38:27 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

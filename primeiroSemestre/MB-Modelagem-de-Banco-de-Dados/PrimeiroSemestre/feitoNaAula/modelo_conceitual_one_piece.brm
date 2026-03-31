@@ -1,0 +1,120 @@
+{
+    "name": "Modelo Conceitual One Piece",
+    "entities": [
+        {
+            "name": "PERSONAGEM",
+            "attributes": [
+                {
+                    "name": "id_personagem",
+                    "type": "INT",
+                    "pk": true,
+                    "not_null": true
+                },
+                {
+                    "name": "nm_personagem",
+                    "type": "VARCHAR(100)",
+                    "not_null": true
+                },
+                {
+                    "name": "id_fruta",
+                    "type": "INT",
+                    "fk": "FRUTA.id_fruta",
+                    "not_null": false
+                },
+                {
+                    "name": "id_tripulacao",
+                    "type": "INT",
+                    "fk": "TRIPULACAO.id_tripulacao",
+                    "not_null": false
+                }
+            ]
+        },
+        {
+            "name": "FRUTA",
+            "attributes": [
+                {
+                    "name": "id_fruta",
+                    "type": "INT",
+                    "pk": true,
+                    "not_null": true
+                },
+                {
+                    "name": "nm_fruta",
+                    "type": "VARCHAR(100)",
+                    "not_null": true
+                },
+                {
+                    "name": "nm_tipo_fruta",
+                    "type": "VARCHAR(50)",
+                    "not_null": false
+                }
+            ]
+        },
+        {
+            "name": "HAKI",
+            "attributes": [
+                {
+                    "name": "id_haki",
+                    "type": "INT",
+                    "pk": true,
+                    "not_null": true
+                },
+                {
+                    "name": "nm_haki",
+                    "type": "VARCHAR(100)",
+                    "not_null": true
+                },
+                {
+                    "name": "nm_tipo_haki",
+                    "type": "VARCHAR(50)",
+                    "not_null": false
+                }
+            ]
+        },
+        {
+            "name": "TRIPULACAO",
+            "attributes": [
+                {
+                    "name": "id_tripulacao",
+                    "type": "INT",
+                    "pk": true,
+                    "not_null": true
+                },
+                {
+                    "name": "nm_tripulacao",
+                    "type": "VARCHAR(100)",
+                    "not_null": true
+                },
+                {
+                    "name": "nm_navio_tripulacao",
+                    "type": "VARCHAR(100)",
+                    "not_null": true
+                }
+            ]
+        },
+        {
+            "name": "PERSONAGEM_HAKI",
+            "attributes": [
+                {
+                    "name": "id_personagem",
+                    "type": "INT",
+                    "pk": true,
+                    "fk": "PERSONAGEM.id_personagem",
+                    "not_null": true
+                },
+                {
+                    "name": "id_haki",
+                    "type": "INT",
+                    "pk": true,
+                    "fk": "HAKI.id_haki",
+                    "not_null": true
+                },
+                {
+                    "name": "nm_nivel_personagem_haki",
+                    "type": "VARCHAR(100)",
+                    "not_null": true
+                }
+            ]
+        }
+    ]
+}

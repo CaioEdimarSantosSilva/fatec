@@ -1,0 +1,81 @@
+/*Genero Crime ou Ação
+  Ano maior que 2000 */
+
+db.filmes.find({
+    $and: [
+    {
+        $or: [
+            { generos: "Crime"},
+            { generos: "Ação"}
+        ]
+    },
+    { ano: {$gt: 2000}}
+    ]
+})
+
+db.filmes.find({ $and: [{ $or: [{ generos: "Crime"}, { generos: "Ação"}]},{ ano: {$gt: 2000}}]})
+
+
+
+[
+    {
+        "titulo": "O Poderoso Chefão",
+        "ano": 1972,
+        "generos": ["Crime", "Drama"],
+        "diretor": "Francis Ford Coppola",
+        "elenco": ["Marlon Brando", "Al Pacino", "James Caan"],
+        "avaliacao": {
+            "imdb": 9.2,
+            "rotten_tomatoes": 98
+        },  
+        "sinopse": "A saga da família Corleone, liderada por Don Vito Corleone, e sua transição de poder para o filho Michael."
+    },
+    {
+        "titulo": "Interestelar",
+        "ano": 2014,
+        "generos": ["Ficção Científica", "Aventura", "Drama"],
+        "diretor": "Christopher Nolan",
+        "elenco": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"],
+        "avaliacao": {
+            "imdb": 8.6,
+            "rotten_tomatoes": 72
+        },
+        "sinopse": "Um grupo de exploradores espaciais viaja através de um buraco de minhoca em busca de um novo lar para a humanidade."
+    },
+    {
+        "titulo": "Cidade de Deus",
+        "ano": 2002,
+        "generos": ["Crime", "Drama"],
+        "diretor": "Fernando Meirelles",
+        "elenco": ["Alexandre Rodrigues", "Leandro Firmino", "Phellipe Haagensen"],
+        "avaliacao": {
+            "imdb": 8.6,
+            "rotten_tomatoes": 91
+        },
+        "sinopse": "A história de dois jovens que crescem em uma favela do Rio de Janeiro e seguem caminhos diferentes: um se torna fotógrafo, o outro, traficante."
+    },
+    {
+        "titulo": "Tropa de Elite",
+        "ano": 2007,
+        "generos": ["Ação", "Crime", "Drama"],
+        "diretor": "José Padilha",
+        "elenco": ["Wagner Moura", "Caio Junqueira", "André Ramiro"],
+        "avaliacao": {
+            "imdb": 8.0,
+            "rotten_tomatoes": 90
+        },
+        "sinopse": "A rotina de policiais do BOPE (Batalhão de Operações Policiais Especiais) no combate ao tráfico de drogas no Rio de Janeiro."
+    },
+    {
+        "titulo": "Central do Brasil",
+        "ano": 1998,
+        "generos": ["Drama"],
+        "diretor": "Walter Salles",
+        "elenco": ["Fernanda Montenegro", "Vinícius de Oliveira", "Marília Pêra"],
+        "avaliacao": {
+            "imdb": 8.0,
+            "rotten_tomatoes": 95
+        },
+        "sinopse": "Uma mulher que escreve cartas para analfabetos na Central do Brasil acaba embarcando em uma viagem com um menino em busca de seu pai."
+    }
+]

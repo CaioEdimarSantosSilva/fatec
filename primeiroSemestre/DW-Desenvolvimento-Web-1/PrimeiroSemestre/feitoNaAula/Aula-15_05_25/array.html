@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARRAY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="if.html">IF</a>
+            <a href="switch.html">SWITCH</a>
+            <a href="for.html">FOR</a>
+            <a href="while.html">WHILE</a>
+            <a href="array.html" style="color: orange;">ARRAY</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>
+                Lista de Alunos
+                <br><br>
+                [Ana, Maria, Braga]
+            </h2>
+        </section>
+        <section class="resultado" id="resultado">
+            <script>
+                let nomes = ["Ana", "Maria", "Braga"];
+                document.write("<b>Array nomes:</b> " + nomes);
+                document.write("<br><b>Apresentadora:</b> " + nomes[0]);
+                document.write("<br><b>Array nomes:</b> " + nomes.join("; "));
+                document.write("<br><b>Elementos no Array:</b> " + nomes.length);
+                //ADD UM ELEMENTO NO INICIO DO ARRAY
+                nomes.unshift("Louro");
+                document.write("<br><b>Array nomes atualizado:</b> " + nomes);
+                //ADD UM ELEMENTO NO FINAL DO ARRAY
+                nomes.push("José");
+                document.write("<br><b>Array nomes atualizado_2:</b> " + nomes);
+                //REMOVER O PRIMEIRO ELEMENTO DO ARRAY
+                nomes.shift();
+                document.write("<br><b>Array nomes atualizado_3:</b> " + nomes);
+                //REMOVER O ULTIMO ELEMENTO DO ARRAY
+                nomes.pop();
+                document.write("<br><b>Array nomes atualizado_4:</b> " + nomes);
+                //ORDENA O ARRAY
+                nomes.sort();
+                document.write("<br><b>Array nomes atualizado_5:</b> " + nomes);
+            </script>
+        </section>
+    </main>
+</body>
+</html>

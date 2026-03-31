@@ -1,0 +1,29 @@
+{//1-Elabore um programa que permita a digitação de 3 vetores com 5 posições, um contendo o nome, o segundo contendo a
+ //primeira nota e o terceiro contendo a segunda nota. Logo após as entradas mostrar na tela o nome, as notas e a
+ //média aritmética destas duas notas.
+
+    string[] nomes = new string[5];
+    double[] notas1 = new double[5];
+    double[] notas2 = new double[5];
+
+    for (int i = 0; i < 5; i++)
+    {
+        Console.Write("Digite o nome do aluno " +i + 1 +": ");
+        nomes[i] = Console.ReadLine();
+
+        Console.Write("Digite a primeira nota de "+ nomes[i] + ": ");
+        notas1[i] = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Digite a segunda nota de " + nomes[i] + ": ");
+        notas2[i] = Convert.ToDouble(Console.ReadLine());
+    }
+
+    Console.WriteLine("Resultados:");
+    for (int i = 0; i < 5; i++)
+    {
+        double media = (notas1[i] + notas2[i]) / 2;
+        Console.WriteLine(nomes[i]+": Notas = "+ notas1[i] +", "+ notas2[i] + " | Média = " + media);
+
+    }
+    Console.ReadKey();
+}

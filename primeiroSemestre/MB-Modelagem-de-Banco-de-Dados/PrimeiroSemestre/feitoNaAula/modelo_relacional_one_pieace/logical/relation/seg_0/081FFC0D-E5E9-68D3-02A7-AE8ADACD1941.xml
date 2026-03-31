@@ -1,0 +1,34 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CHARACTER_HAKI" directorySegmentName="seg_0" id="081FFC0D-E5E9-68D3-02A7-AE8ADACD1941">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 03:51:17 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>4F2D6126-6596-B077-1EA6-EFABE9E2ECF5</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>6E4A0B89-90C3-00F3-663C-68A4F08A5B47</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="nm_level_character_haki" id="7743EA4C-3FE1-3BDE-A488-291D1399E92C">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 03:52:01 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>

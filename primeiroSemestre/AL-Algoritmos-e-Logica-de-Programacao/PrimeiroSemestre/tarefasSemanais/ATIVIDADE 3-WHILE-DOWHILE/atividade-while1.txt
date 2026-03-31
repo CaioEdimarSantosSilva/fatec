@@ -1,0 +1,27 @@
+public class Program
+{
+	public static void Main()
+	{//1 - Elabore Fluxograma e programa que exiba na tela uma sequencia de números naturais começando em I,
+    //terminando em F. (Verificar se o final é maior que o inicial)
+      int I, F;
+      Console.WriteLine("Qual o valor do (I): ");
+      I = Convert.ToInt32(Console.ReadLine());
+      Console.WriteLine("Qual o valor do (F): ");
+      F = Convert.ToInt32(Console.ReadLine());
+      if (I < F) 
+      {
+          Console.WriteLine("Sequencia dos numeros naturais: ");
+          while (I <= F)
+          {
+              Console.Write(I + " ");
+              I++;
+          }
+      }
+      else
+      {
+          Console.WriteLine("Erro: o número final deve ser maior que o inicial.");
+      }
+      Console.ReadKey();
+  }
+}
+

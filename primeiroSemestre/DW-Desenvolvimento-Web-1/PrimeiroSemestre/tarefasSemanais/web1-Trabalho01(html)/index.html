@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagens/fotoPerfil.png">
+    <title>MeuPerfil</title>
+</head>
+
+<body background="imagens/fundoPng.png" onload="window.scrollTo(0, 0);">
+    <header>
+        <br>
+        <hr>
+            <h1><i>meuPerfil.com</i></h1>
+        <hr>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#apresentacao">Apresentação</a></li>
+            <li><a href="#hobbiesInteresses">Hobbies e Interesses</a></li>
+            <li><a href="#habilidades">Minhas Habilidades</a></li>
+            <li><a href="#tabela">Tabela de Habilidades</a></li>
+            <li><a href="#formulario">Formulário de Contato</a></li>
+            <li><a href="#redesSociais">Redes Sociais</a></li>
+        </ul>
+        <hr>
+    </nav>
+    <main>
+        
+        <section id="apresentacao">
+            <img src="imagens/fotoPerfil.png" alt="foto de perfil" width="15%">
+            <h1>Então vamos lá ... </h1>
+
+            <p> &nbsp;&nbsp; Salve a todos, me chamo Caio Edimar tenho 23.5 anos e moro em Peruíbe. Nasci em <i>São Paulo capital</i>, mas me mudei aos 5 anos de idade para o Paraná,
+                morando
+                na capital e em
+                uma pequena <br> cidade litorânea chamada Matinhos, quando completei 10 anos me mudei para baixada
+                santista
+                em
+                Itanhaém onde morei <br> por 6 anos até me mudar pra <u>Peruíbe</u>, foi na baixada santista onde morei
+                por
+                mais
+                tempo.
+                <br>
+                &nbsp;&nbsp; <b>Pude aproveitar bem a minha infância</b>, eu nunca ficava em casa todos os dias tinha
+                algo para
+                fazer,
+                como andar de skate, <br> andar de bicicleta pela cidade, se reunir com os amigos só para passar o
+                tempo. Na
+                adolescência curti bastante, sai muito <br> e também passava bastante tempo jogando.
+            </p>
+            <hr>
+        </section>
+
+        <section id="hobbiesInteresses">
+            <h2>Meus Hobbies e Interesses</h2>
+            <ul type="circle">
+                <li>Jogos Eletrônicos</li>
+                <li>HQs</li>
+                <li>Filmes</li>
+                <li>Series</li>
+                <li>Animes</li>
+                <li>RPGs</li>
+            </ul>
+            <hr>
+        </section>
+
+        <section id="habilidades">
+            <h2>Minhas Habilidades</h2>
+            <ol>
+                <li><b>Linguagens de Programação:</b>
+                    <ul type="circle">
+                        <li>Python</li>
+                        <li>javascript</li>
+                        <li>C#</li>
+                    </ul>
+                    <br>
+                </li>
+                <li><b>Linguagens de Marcação:</b>
+                    <ul type="circle">
+                        <li>Html</li>
+                        <li>Css</li>
+                    </ul>
+                    <br>
+                </li>
+                <li><b>Bibliotecas e Frameworks:</b>
+                    <ul type="circle">
+                        <li>Bootstrap</li>
+                        <li>jQuery</li>
+                    </ul>
+                    <br>
+                </li>
+                <li><b>Banco de Dados:</b>
+                    <ul type="circle">
+                        <li>MongoDB</li>
+                    </ul>
+                    <br>
+                </li>
+
+            </ol>
+            <hr>
+        </section>
+
+        <section id="tabela">
+            <h2>Minha Tabela de Habilidades</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Habilidade</th>
+                        <th>Conhecimento</th>
+                        <th>Nível</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Linguagens de Programação</td>
+                        <td>Javascript</td>
+                        <td rowspan="2">Intermediário</td>
+                    </tr>
+                    <tr>
+                        <td>Python</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Linguagens de Marcação</td>
+                        <td>HTML</td>
+                        <td rowspan="3">Avançado</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">Bibliotecas e Frameworks</td>
+                        <td>Bootstrap</td>
+                    </tr>
+                    <tr>
+                        <td>jQuery</td>
+                        <td rowspan="3">Intermediário</td>
+                    </tr>
+                    <tr>
+                        <td>Banco de Dados</td>
+                        <td>MongoDB</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Inglês</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="formulario">
+            <h2>Formulário de Contato</h2>
+            <form>
+                <label>Nome:</label>
+                <br>
+                <input type="text" name="nome" required autofocus size="35">
+                <br>
+                <label>E-mail:</label>
+                <br>
+                <input type="email" placeholder="user@email.com" required size="35">
+                <br>
+
+                <h3>Gênero</h3>
+                <input type="radio" id="mas" name="pag">
+                <label for="mas">Masculino</label>
+                <br>
+                <input type="radio" id="fem" name="pag">
+                <label for="fem">Feminino</label>
+                <br>
+
+                <h3>Quais são seus interesses?</h3>
+                <input type="checkbox" id="add1" name="add1">
+                <label for="add1">Jogos Eletrônicos</label>
+                <br>
+                <input type="checkbox" id="add2" name="add2">
+                <label for="add2">HQs</label>
+                <br>
+                <input type="checkbox" id="add3" name="add3">
+                <label for="add3">Filmes</label>
+                <br>
+                <input type="checkbox" id="add4" name="add4">
+                <label for="add4">Series</label>
+                <br>
+                <input type="checkbox" id="add5" name="add5">
+                <label for="add5">Animes</label>
+                <br>
+                <input type="checkbox" id="add6" name="add6">
+                <label for="add6">RPGs</label>
+                <br><br>
+
+                <label>Área de Interesse:</label>
+                <br>
+                <select>
+                    <optgroup label="Interesses">
+                        <option>Programador</option>
+                        <option>Design</option>
+                        <option>Escritor</option>
+                    </optgroup>
+                </select>
+                <br><br>
+
+                <label for="end">Mensagem:</label>
+                <br>
+                <textarea id="end" cols="50" rows="5"></textarea>
+                <br>
+                <input type="submit" value="Enviar">
+            </form>
+            <hr>
+        </section>
+
+        <section id="redesSociais">
+            <h2>Redes Sociais e Projetos</h2>
+            <p>Você pode me encontrar nas redes sociais ou conferir meus projetos em:</p>
+            <ul>
+                <li><a href="https://github.com/CaioEdimarSantosSilva" target="_blank">GitHub</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <h5>&copy;2025 Caio Edimar Santos Silva. Todos os direitos reservados.</h5>
+    </footer>
+</body>
+
+</html>

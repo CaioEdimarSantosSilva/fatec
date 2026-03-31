@@ -1,0 +1,19 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        //8 - Escreva um código em C# que o usuário entre com 3 valores e faça o cálculo do delta da fórmula de Bhaskara. Delta = (b*b) - 4*a*c;
+        double a, b, c, delta;        
+        Console.Write("Digite o valor de a: ");
+        a = Convert.ToDouble(Console.ReadLine());        
+        Console.Write("Digite o valor de b: ");
+        b = Convert.ToDouble(Console.ReadLine());      
+        Console.Write("Digite o valor de c: ");
+        c = Convert.ToDouble(Console.ReadLine());    
+        delta = (b * b) - (4 * a * c);    
+        Console.WriteLine("O valor de delta é " + delta + "!");       
+        Console.ReadKey();
+    }
+}

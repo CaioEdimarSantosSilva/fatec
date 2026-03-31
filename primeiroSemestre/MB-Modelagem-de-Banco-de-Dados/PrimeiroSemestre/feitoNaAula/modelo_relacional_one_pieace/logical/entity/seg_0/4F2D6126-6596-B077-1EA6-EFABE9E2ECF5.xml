@@ -1,0 +1,74 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4F2D6126-6596-B077-1EA6-EFABE9E2ECF5" name="HAKI">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:44:02 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_haki" id="F0FF385A-B282-2ABB-AC00-960F007F9D2D">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:44:20 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_haki" id="8DB47027-7E49-677F-3851-B303CD231178">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:44:51 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_type_haki" id="DEF303FD-1C0A-551C-6849-2422114119CD">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:45:13 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="2EB0FB05-EF14-B87E-B685-1848C6A457FB" name="HAKI PK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:44:40 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F0FF385A-B282-2ABB-AC00-960F007F9D2D</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

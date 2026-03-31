@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWITCH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="if.html">IF</a>
+            <a href="switch.html" style="color: orange;">SWITCH</a>
+            <a href="for.html">FOR</a>
+            <a href="while.html">WHILE</a>
+            <a href="array.html">ARRAY</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Inscrição</h2>
+            <label>Curso</label>
+            <input type="text" id="curso"><br>
+            <label>Ciclo (1 a 6)</label>
+            <input type="number" id="ciclo" min="1" max="6"><br>
+            <button onclick="enviar()">Enviar</button>
+        </section>
+
+        <section class="resultado" id="resultado"></section>
+    </main>
+    
+
+
+
+
+    <script>
+        function enviar(){
+            const curso = document.getElementById("curso").value;
+            const ciclo = document.getElementById("ciclo").value;
+            const resultado = document.getElementById("resultado");
+
+            let op_ciclo = "";
+
+            if(curso != "" && ciclo != ""){
+                switch(parseInt(ciclo)){
+                    case 1:
+                        op_ciclo = "Primeiro ciclo";
+                        break;
+                    case 2:
+                        op_ciclo = "Segundo ciclo";
+                        break;
+                    case 3:
+                        op_ciclo = "Terceiro ciclo";
+                        break;
+                    case 4:
+                        op_ciclo = "Quarto ciclo";
+                        break;
+                    case 5:
+                        op_ciclo = "Quinto ciclo";
+                        break;
+                    case 6:
+                        op_ciclo = "Sexto ciclo";
+                        break;
+                    default:
+                        op_ciclo = "Ciclo desconhecido";
+                        // break - OPCIONAL
+                }
+                resultado.innerHTML = "<strong>Curso: </strong>" + curso + "<br>" + op_ciclo; 
+            }
+            else{
+                resultado.innerHTML = "<h1 style='color:red; text-align:center;'>Preencha Todos os Campos</h1>";
+            }
+        }
+    </script>
+</body>
+</html>

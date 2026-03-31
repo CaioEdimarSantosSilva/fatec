@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHILE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="if.html">IF</a>
+            <a href="switch.html">SWITCH</a>
+            <a href="for.html">FOR</a>
+            <a href="while.html" style="color: orange;">WHILE</a>
+            <a href="array.html">ARRAY</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Fatorial</h2>
+            <label>Número do Fatorial</label>
+            <input type="number" id="num"><br>
+            <button onclick="enviar()">Enviar</button>
+        </section>
+
+        <section class="resultado" id="resultado"></section>
+    </main>
+    
+
+    <script>
+        function enviar(){
+            const numero = document.getElementById("num").value;
+            const resultado = document.getElementById("resultado");
+            resultado.innerHTML ='';
+
+            if(numero == ""){
+                alert("Informe um número");
+            }
+            else{
+                let c = 1;
+                let fatorial = 1;
+                while(c <= numero){
+                    fatorial *= c
+                    c++;
+                }
+                resultado.innerHTML = fatorial;
+            }
+
+        }
+    </script>
+</body>
+</html>

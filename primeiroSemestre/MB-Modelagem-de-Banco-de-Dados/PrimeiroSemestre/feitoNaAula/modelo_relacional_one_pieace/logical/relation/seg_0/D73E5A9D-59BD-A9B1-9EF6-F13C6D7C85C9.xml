@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="eat" directorySegmentName="seg_0" id="D73E5A9D-59BD-A9B1-9EF6-F13C6D7C85C9">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:41 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<sourcePk>9B2CE799-B949-622E-9B6C-CA521D21D43C</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F6D69DF2-E0DD-971F-0E50-F1C6E2D545DD</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>6E4A0B89-90C3-00F3-663C-68A4F08A5B47</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

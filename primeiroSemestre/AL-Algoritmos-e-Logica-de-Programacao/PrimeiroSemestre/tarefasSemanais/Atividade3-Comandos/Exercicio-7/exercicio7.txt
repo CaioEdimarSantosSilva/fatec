@@ -1,0 +1,20 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        /*7 - Faça um código em C# que leia a idade de uma pessoa expressa em anos, meses e dias e escreva
+		a idade dessa pessoa expressa apenas em dias. Considerar ano com 365 dias e mês com 30 dias.*/
+        int anos, meses, dias, idadeDias;
+        Console.Write("Digite a sua idade em anos: ");
+        anos = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Digite quantos meses se passaram desde o seu último aniversário: ");
+        meses = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Digite quantos dias se passaram no mês atual: ");
+        dias = Convert.ToInt32(Console.ReadLine());
+        idadeDias = (anos * 365) + (meses * 30) + dias;
+        Console.WriteLine("A idade total em dias é " + idadeDias + "!");
+        Console.ReadKey();
+    }
+}

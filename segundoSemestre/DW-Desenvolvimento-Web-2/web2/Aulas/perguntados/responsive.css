@@ -1,0 +1,326 @@
+@media screen and (max-width: 1239px) and (min-width: 1024px) {
+  h2 {
+    font-size: 3.5em;
+  }
+
+  h3 {
+    font-size: 2.2em;
+  }
+
+  form {
+    width: 85%;
+    padding: 18px;
+  }
+
+  select {
+    font-size: 1.4em;
+    padding: 9px;
+  }
+
+  .botao {
+    font-size: 1.4em;
+    padding: 9px 18px;
+  }
+
+  .pergunta_form {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  form {
+    width: 90%;
+    padding: 16px;
+  }
+
+  select {
+    font-size: 1.3em;
+    padding: 8px;
+  }
+
+  .botao {
+    font-size: 1.3em;
+    padding: 8px 16px;
+  }
+
+  .pergunta_form {
+    font-size: 1em;
+  }
+
+  .grid_pergunta {
+    gap: 10px;
+  }
+
+  .item_pergunta {
+    padding: 8px 12px;
+    font-size: 0.95em;
+  }
+
+  .cabecario_perguntas {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-align: center;
+    line-height: 1.1;
+  }
+
+  h3 {
+    font-size: 1.8em;
+  }
+
+  form {
+    width: 95%;
+    padding: 15px;
+  }
+
+  select {
+    font-size: 1.2em;
+    padding: 8px;
+  }
+
+  .botao {
+    font-size: 1.2em;
+    padding: 10px 15px;
+  }
+
+  .pergunta_form {
+    font-size: 0.95em;
+  }
+
+  .grid_pergunta {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .item_pergunta {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .cabecario_perguntas {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  input[type="radio"] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .escolha_tema {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  body {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    line-height: 1;
+    word-break: break-word;
+  }
+
+  h3 {
+    font-size: 1.4em;
+    line-height: 1.2;
+  }
+
+  form {
+    width: 98%;
+    padding: 12px;
+  }
+
+  select {
+    font-size: 1.1em;
+    padding: 6px;
+  }
+
+  .botao {
+    font-size: 1.1em;
+    padding: 8px 12px;
+  }
+
+  .pergunta_form {
+    font-size: 0.85em;
+  }
+
+  .grid_pergunta {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .item_pergunta {
+    padding: 8px;
+    font-size: 0.85em;
+    border-radius: 10px;
+  }
+
+  .cabecario_perguntas {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+
+  input[type="radio"] {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+  }
+
+  .escolha_tema {
+    font-size: 1em;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    line-height: 1.4;
+  }
+
+  .resposta-correta {
+    padding: 6px 8px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  body {
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+    margin-bottom: 8px;
+    line-height: 0.9;
+  }
+
+  h3 {
+    font-size: 1.2em;
+    line-height: 1.1;
+  }
+
+  form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  select {
+    font-size: 1em;
+    padding: 5px;
+  }
+
+  .botao {
+    font-size: 1em;
+    padding: 6px 10px;
+  }
+
+  .pergunta_form {
+    font-size: 0.8em;
+  }
+
+  .grid_pergunta {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .item_pergunta {
+    padding: 6px;
+    font-size: 0.8em;
+    border-radius: 8px;
+  }
+
+  .cabecario_perguntas {
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 10px;
+  }
+
+  input[type="radio"] {
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+  }
+
+  .escolha_tema {
+    font-size: 0.9em;
+  }
+
+  label {
+    margin-bottom: 3px;
+    line-height: 1.3;
+  }
+}
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  body {
+    padding: 5px;
+  }
+
+  h2 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  form {
+    width: 98%;
+    padding: 8px;
+  }
+
+  .pergunta_form {
+    font-size: 0.8em;
+  }
+
+  .cabecario_perguntas {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  .grid_pergunta {
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .item_pergunta {
+    padding: 6px;
+    font-size: 0.75em;
+  }
+
+  .botao {
+    font-size: 0.9em;
+    padding: 6px 12px;
+  }
+}

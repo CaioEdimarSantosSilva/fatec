@@ -1,0 +1,65 @@
+body{
+    background-image: url(images/fundo.jpeg);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+}
+
+form{
+    margin: 100px;
+    padding: 10px;
+    background-color: rgba(245, 245, 245, 0.897);
+    width: 300px;
+    border-radius: 3%;
+}
+
+h1{
+    font-size: 3em;
+    color: rgb(199, 27, 27);
+}
+
+h2{
+    font-size: 2em;
+    color: orangered;
+}
+
+form > label{
+    font-size: 1.5em;
+}
+
+.nome{
+    width: 80%;
+}
+
+select{
+    width: 80%;
+}
+
+.botao{
+    width: 100%;
+    margin-top: 5%;
+    font-size: 1em;
+    background-color: orangered;
+    color: white;
+    border: none;             
+    border-radius: 8px;       
+    padding: 12px;            
+    cursor: pointer;           
+    font-weight: bold;   
+    transition: background 0.3s ease; 
+}
+
+.botao:hover {
+    background-color: darkred;
+}
+
+.resposta{
+    margin: 100px;
+    padding: 10px;
+    background-color: rgba(245, 245, 245, 0.897);
+    width: 300px;
+    border-radius: 3%;
+    height: 500px;
+}

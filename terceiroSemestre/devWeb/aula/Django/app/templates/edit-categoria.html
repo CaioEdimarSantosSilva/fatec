@@ -1,0 +1,17 @@
+{% extends 'template.html' %}
+
+{% block titulo %} Editar Categorias {% endblock %}
+
+{% block conteudo %}
+
+    <h1>Editar Categorias</h1>
+    <br><br>
+
+    <form method="post">
+        <br>
+        {% csrf_token %}
+        {{form}}
+        <br>
+        <input type="submit" value="Atualizar">
+    </form>
+{% endblock %}

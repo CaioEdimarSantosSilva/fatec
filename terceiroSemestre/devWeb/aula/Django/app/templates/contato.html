@@ -1,0 +1,22 @@
+{% extends 'template.html' %}
+
+{% block titulo %} Django Contato {% endblock %}
+
+{% block conteudo %}
+
+    <h1>Contato</h1>
+
+    <br><br>
+
+    {% for cat in contatos %}
+    <p>
+        ID: {{ cat.id }} - 
+        Nome: {{ cat.nome }} -
+        Email:{{ cat.email }} -
+        assusnto:{{ cat.assusto }} -
+        Mensagem:{{ cat.mensagem }} 
+        <a href="{% url 'delcontato' cat.id %}"> Excluir </a> 
+    </p>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="if.html" style="color: orange;">IF</a>
+            <a href="switch.html">SWITCH</a>
+            <a href="for.html">FOR</a>
+            <a href="while.html">WHILE</a>
+            <a href="array.html">ARRAY</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Boletim</h2>
+            <label>Nome</label>
+            <input type="text" id="nome"><br>
+            <label>Nota da P1</label>
+            <input type="number" id="p1"><br>
+            <label>Nota da P2</label>
+            <input type="number" id="p2"><br>
+            <label>Nota da Trabalho</label>
+            <input type="number" id="trab"><br>
+            <button onclick="enviar()">Enviar</button>
+        </section>
+
+        <section class="resultado" id="resultado"></section>
+    </main>
+
+    <script>
+        function enviar() {
+            const nome = document.getElementById("nome").value;
+            const p1 = document.getElementById("p1").value;
+            const p2 = document.getElementById("p2").value;
+            const trabalho = document.getElementById("trab").value;
+
+            if(nome != "" && p1 != "" && p2 != "" && trabalho != ""){
+
+            let mensagem;
+            let media = (parseFloat(p1) + parseFloat(p2) + parseFloat(trabalho)) / 3;
+
+            if (media >= 6) {
+                mensagem = "ALUNO APROVADO";
+            }
+            else if(media == 0){
+                mensagem = "ALUNO EM RECUPERAÇÃO";
+            }
+            else{
+                mensagem = "ALUNO REPROVADO";
+            }
+
+            const resultado = document.getElementById("resultado");
+            resultado.innerHTML = "<strong>Nome: </strong>" + nome + 
+            "<br><strong>P1: </strong>" + p1 + 
+            "<br><strong>P2: </strong>" + p2 + 
+            "<br><strong>Trabalho: </strong>" + trabalho + 
+            "<br><strong>Media: </strong>" + media.toFixed(2) + 
+            "<br><h2>"+ mensagem + "</h2>";
+        }
+        else{
+            alert("PREENCHA TODOS OS CAMPOS");
+        }
+    }
+    </script>
+
+</body>
+
+</html>

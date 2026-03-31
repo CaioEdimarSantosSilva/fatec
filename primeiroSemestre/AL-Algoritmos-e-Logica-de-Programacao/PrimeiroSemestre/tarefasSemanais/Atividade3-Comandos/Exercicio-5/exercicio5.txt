@@ -1,0 +1,15 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        //5 - Escreva um código para ler um valor (do teclado) e escrever (na tela) o seu antecessor..      
+        int valor, antecessor;  
+        Console.Write("Digite um valor: ");
+        valor = Convert.ToInt32(Console.ReadLine());    
+        antecessor = valor - 1;
+        Console.WriteLine("O antecessor é " + antecessor + "! ");
+        Console.ReadKey();
+    }
+}

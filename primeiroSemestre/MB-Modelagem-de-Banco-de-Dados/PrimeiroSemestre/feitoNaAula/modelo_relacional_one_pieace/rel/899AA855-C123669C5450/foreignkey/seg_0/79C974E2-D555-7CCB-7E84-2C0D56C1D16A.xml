@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="79C974E2-D555-7CCB-7E84-2C0D56C1D16A" containerWithKeyObject="9867FFA1-FBC1-B281-DFA9-3E71DF9A9E68" localFKIndex="FAE53F56-9235-19ED-432D-34D2D8ACE9D1" name="CHARACTER_FRUIT_FK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>D73E5A9D-59BD-A9B1-9EF6-F13C6D7C85C9</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<referredTableLongName>FRUIT</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>19FED273-F192-7A16-44A3-D440B2650E23</referredTableID>
+<keyObject>F3BC73C6-6348-8BDD-AC89-36E00569EB57</keyObject>
+<referredKeyID>F3BC73C6-6348-8BDD-AC89-36E00569EB57</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_fruit</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

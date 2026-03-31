@@ -1,0 +1,13 @@
+{//5-Crie um programa em C# que leia uma única linha contendo vários números inteirosseparados por espaços. 
+//Identificar o maior e o menor valor entre eles, conforme o modelo databela abaixo:
+            Console.Write("");
+            string entrada = Console.ReadLine();
+            string[] listaEntrada = entrada.Split(' ');
+            int valorTotal = 0;
+            foreach(string valor in listaEntrada)
+            {
+                valorTotal += Convert.ToInt32(valor);
+            }
+            Console.WriteLine(valorTotal);
+            Console.ReadKey();
+        }

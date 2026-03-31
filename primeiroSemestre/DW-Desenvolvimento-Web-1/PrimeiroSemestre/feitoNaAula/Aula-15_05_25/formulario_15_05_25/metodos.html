@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Usuário</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      background-color: #f4f4f4;
+    }
+
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .formulario {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type='text'],
+    select {
+      width: 100%;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: lightblue;
+      color: white;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    button:hover {
+      background-color: orangered;
+    }
+
+    .resultado {
+      margin-top: 20px;
+      background: #e2e3e5;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Cadastro de Usuário</h2>
+    <form>
+      <div class="formulario">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" />
+      </div>
+
+      <fieldset class="formulario">
+        <legend>Gênero:</legend>
+        <input type="radio" name="genero" value="Masculino" class="genero"> Masculino
+        <input type="radio" name="genero" value="Feminino" class="genero"> Feminino
+      </fieldset>
+
+      <fieldset class="formulario">
+        <legend>Interesses:</legend>
+        <input type="checkbox" class="interesse" value="Esportes"> Esportes
+        <input type="checkbox" class="interesse" value="Música"> Música
+        <input type="checkbox" class="interesse" value="Tecnologia"> Tecnologia
+      </fieldset>
+
+      <div class="formulario">
+        <label for="estado">Estado:</label>
+        <select id="estado">
+          <option value="">Selecione</option>
+          <option value="SP">São Paulo</option>
+          <option value="Xique-Xique Bahia">Xique-Xique Bahia</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="MG">Minas Gerais</option>
+        </select>
+      </div>
+
+      <button type="button" onclick="cadastrar()">Cadastrar</button>
+    </form>
+
+    <div class="resultado" id="resultado"></div>
+  </div>
+
+  <script>
+    const cadastrar = () => {
+      const resultado = document.getElementById("resultado");
+      const nome = document.getElementById("nome").value;
+      const genero = document.getElementsByClassName("genero");
+      const interesses = document.querySelectorAll(".interesse");
+      const estados = document.querySelector("#estado").value;
+
+      // console.log(estados)
+      
+      let op_interesses = [];
+      let x = 0;
+      while(x < interesses.length){
+        if(interesses[x].checked){
+          op_interesses.push(interesses[x].value);
+        }
+        x++;
+      }
+      // console.log(op_interesses.join(', '))
+      
+      let op_genero = "";
+      for (let i = 0; i < genero.length; i++) {
+        if (genero[i].checked) {
+          // console.log(genero[i].value);
+          op_genero = genero[i].value;
+        }
+      }
+
+      
+
+      resultado.innerHTML = "<br><b>Nome: </b>" + nome +
+                            "<br><b>Gênero: </b>" + op_genero +
+                            "<br><b>Interesses: </b>" + op_interesses.join(', ') + 
+                            "<br><b>Estado: </b>" + estados;
+    }
+  </script>
+</body>
+
+</html>

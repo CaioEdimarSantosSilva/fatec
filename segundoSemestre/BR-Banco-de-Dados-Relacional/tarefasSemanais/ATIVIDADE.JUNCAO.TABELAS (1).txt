@@ -1,0 +1,41 @@
+ALUNOS: JOÃO PEDRO DA SILVA DE OLIVEIRA, EDUARDO GONCALVEZ DE SOUZA SILVA, GEOVANNY FERREIRA ELIAS,
+CAIO EDIMAR SANTOS SILVA, CARLOS EDUARDO CORREIA, WEVERTON TEVEZ DE NINS DOS SANTOS E PEDRO MENESEZ MARTINENGUE GONÇALVES FONTES.
+
+13.
+SELECT 
+    f.nm_filme  "FILME",
+    f.nm_genero  "GENERO",
+    l.dt_locacao  "DATA_LOCACAO",
+    l.vl_locacao "VALOR",
+    l.dt_devolucao "DEVOLUCAO"
+FROM FILME f
+JOIN LOCACAO l ON f.cd_filme = l.FILME_cd_filme
+
+14.
+SELECT
+    f.nm_filme  "FILME",
+    f.nm_genero  "GENERO",
+    l.dt_locacao  "DATA_LOCACAO",
+    l.vl_locacao "VALOR",
+    l.dt_devolucao "DEVOLUCAO"
+FROM FILME f
+JOIN LOCACAO l ON f.cd_filme = l.FILME_cd_filme
+WHERE nm_filme LIKE 'A%
+15.
+SELECT 
+    f.nm_filme  "FILME",
+    f.nm_genero  "GENERO",
+    l.dt_locacao  "DATA_LOCACAO"
+FROM FILME f
+JOIN LOCACAO l ON f.cd_filme = l.FILME_cd_filme
+WHERE f.nm_genero IN ('COMEDIA', 'TERROR', 'AÇÃO');
+
+16.
+SELECT f.nm_filme, f.nm_genero, l.dt_locacao
+FROM FILME f
+JOIN LOCACAO l ON f.cd_filme = l.FILME_cd_filme
+MINUS
+SELECT f.nm_filme, f.nm_genero, l.dt_locacao
+FROM FILME f
+JOIN LOCACAO l ON f.cd_filme = l.FILME_cd_filme
+WHERE l.dt_devolucao IS NULL;

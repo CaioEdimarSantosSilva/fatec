@@ -1,0 +1,17 @@
+using System;
+
+public class Program
+{
+    public static void Main()
+    {
+        //6 - Escreva um programa para ler as dimensões de um retângulo (base e altura), calcular e escrever a área do retângulo.      
+        double baseRetangulo, altura, area;       
+        Console.Write("Digite a base do retângulo: ");
+        baseRetangulo = Convert.ToDouble(Console.ReadLine());       
+        Console.Write("Digite a altura do retângulo: ");
+        altura = Convert.ToDouble(Console.ReadLine());      
+        area = baseRetangulo * altura;     
+        Console.WriteLine("A área do retângulo é " + area.ToString("F2"));      
+        Console.ReadKey();
+    }
+}

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Datacaixa</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .produtos {
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        .card {
+            width: 24%;
+            background-color: white;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border: 1px solid black;
+            border-radius: 8px;
+            text-align: center;
+            background-color: lightblue;
+        }
+
+        .btn_adicionar {
+            background-color: green;
+            border-radius: 5px;
+            width: 100%;
+            margin: 10px auto;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .imagem_produto {
+            width: 30%;
+        }
+
+        .comandas {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            height: 90vh;
+            margin-top: 20px;
+            margin-right: 15px;
+        }
+
+        #lista_comanda {
+            height: 80%;
+            overflow-y: auto;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+        }
+
+        #valor_compra {
+            display: none;
+            background-color: lightblue;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+
+        .card_comanda {
+            font-size: 1.2em;
+            background-color: lightblue;
+            border-radius: 15px;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8px 12px;
+        }
+
+
+        #limpar_comanda {
+            width: 100%;
+            margin: 10px auto;
+            background-color: crimson;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn_excluir {
+            background-color: crimson;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <section class="produtos">
+            <h1 style="width: 100%; text-align: center;">Produtos</h1>
+            <div class="card">
+                <img class="imagem_produto" src="imagens/coxinha.semfundo.png" alt="Coxinha">
+                <h2 class="nome_produto" id="coxinha">Coxinha</h2>
+                <p class="valor_produto" id="">R$3,50</p>
+                <button class="btn_adicionar">Adicionar</button>
+            </div>
+            <div class="card">
+                <img class="imagem_produto" src="imagens/pastel-removebg-preview.png">
+                <h2 class="nome_produto" id="pastel">Pastel</h2>
+                <p class="valor_produto" id="">R$8,00</p>
+                <button class="btn_adicionar">Adicionar</button>
+            </div>
+            <div class="card">
+                <img class="imagem_produto" src="imagens/pão_de_queijo-semfundo.png">
+                <h2 class="nome_produto" id="pao_queijo">Pão de Queijo</h2>
+                <p class="valor_produto" id="">R$2,50</p>
+                <button class="btn_adicionar">Adicionar</button>
+            </div>
+            <div class="card">
+                <img class="imagem_produto" src="imagens/enroladinho_de_salsicha-removebg-preview.png">
+                <h2 class="nome_produto" id="enroladinho_salsicha">Enroladinho de Salsicha</h2>
+                <p class="valor_produto" id="">R$3,50</p>
+                <button class="btn_adicionar">Adicionar</button>
+            </div>
+            <div class="card">
+                <img class="imagem_produto" src="imagens/brigadeiro-removebg-preview.png">
+                <h2 class="nome_produto" id="brigadeiro">Brigadeiro</h2>
+                <p class="valor_produto" id="">R$2,00</p>
+                <button class="btn_adicionar">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img class="imagem_produto" src="imagens/sorvete_de_casquinha-removebg-preview.png">
+                <h2 class="nome_produto" id="sorvete">Sorvete de Casquinha</h2>
+                <p class="valor_produto" id="">R$4,50</p>
+                <button class="btn_adicionar">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img class="imagem_produto" src="imagens/bolo-removebg-preview.png">
+                <h2 class="nome_produto" id="bolo">Bolo</h2>
+                <p class="valor_produto" id="">R$6,50</p>
+                <button class="btn_adicionar">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img class="imagem_produto" src="imagens/sonho-removebg-preview.png">
+                <h2 class="nome_produto" id="sonho">Sonho</h2>
+                <p class="valor_produto" id="">R$4,00</p>
+                <button class="btn_adicionar">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img class="imagem_produto" src="imagens/garrafa_da_agua-removebg-preview.png">
+                <h2 class="nome_produto" id="agua">Água</h2>
+                <p class="valor_produto" id="">R$1,99</p>
+                <button class="btn_adicionar">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img class="imagem_produto" src="imagens/suco_de_laranja-removebg-preview.png">
+                <h2 class="nome_produto" id="suco">Suco</h2>
+                <p class="valor_produto" id="">R$5,00</p>
+                <button class="btn_adicionar">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img class="imagem_produto" src="imagens/guaraná-removebg-preview.png">
+                <h2 class="nome_produto" id="refrigerante">Refrigerante</h2>
+                <p class="valor_produto" id="">R$6,30</p>
+                <button class="btn_adicionar">Adicionar</button>
+            </div>
+
+            <div class="card">
+                <img class="imagem_produto" src="imagens/red_bull-removebg-preview.png">
+                <h2 class="nome_produto" id="energetico">Energetico</h2>
+                <p class="valor_produto" id="">R$9,99</p>
+                <button class="btn_adicionar">Adicionar</button>
+            </div>
+        </section>
+        <section class="comandas">
+            <h1 style="width: 100%; text-align: center;">Comanda</h1>
+            <div id="lista_comanda"></div>
+            <button id="limpar_comanda">Limpar
+                Comanda</button>
+            <div id="valor_compra"></div>
+        </section>
+    </main>
+    <script>
+        const botoesAdicionar = document.querySelectorAll(".btn_adicionar");
+        botoesAdicionar.forEach(botao => {
+            botao.addEventListener("mouseenter", () => {
+                botao.style.backgroundColor = "darkgreen";
+            });
+
+            botao.addEventListener("mouseleave", () => {
+                botao.style.backgroundColor = "";
+            });
+        });
+
+        let total = 0;
+        document.querySelectorAll('.btn_adicionar').forEach(botao => {
+            botao.addEventListener('click', () => {
+                const card = botao.closest('.card');
+                const nome = card.querySelector('.nome_produto').textContent;
+                const valorTexto = card.querySelector('.valor_produto').textContent;
+                const imagemSrc = card.querySelector('.imagem_produto').getAttribute('src');
+                const valorCompra = document.getElementById('valor_compra');
+
+                const valor = parseFloat(valorTexto.replace("R$", "").replace(",", "."));
+                total += valor;
+
+                const item = document.createElement('div');
+                item.classList.add('card_comanda');
+                item.innerHTML = `
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                    <img src="${imagemSrc}" style="width: 30px; vertical-align: middle;">
+                    <span>${nome}</span> - <strong>${valorTexto}</strong>
+                    </div>
+                    <button class="btn_excluir">Excluir</button>`;
+
+                item.querySelector('.btn_excluir').addEventListener('click', () => {
+                    item.remove();
+                    total -= valor;
+                    valorCompra.textContent = `Total: R$${total.toFixed(2).replace(".", ",")}`;
+                    if (total === 0) valorCompra.style.display = 'none';
+                });
+
+                document.getElementById('lista_comanda').appendChild(item);
+
+                valorCompra.style.display = 'block';
+                valorCompra.textContent = `Total: R$${total.toFixed(2).replace(".", ",")}`;
+            });
+
+
+        });
+        document.getElementById('limpar_comanda').addEventListener('click', () => {
+            document.getElementById('lista_comanda').innerHTML = '';
+            total = 0;
+            const valorCompra = document.getElementById('valor_compra');
+            valorCompra.textContent = '';
+            valorCompra.style.display = 'none';
+        });
+
+    </script>
+</body>
+
+</html>

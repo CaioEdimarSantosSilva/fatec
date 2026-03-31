@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+</head>
+
+<body id="topo">
+
+    <header>
+        <h1>Bem-vindo à Nossa Loja Online</h1>
+        <p>Encontre os melhores produtos para você!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#Produtos">Produtos</a></li>
+            <li><a href="#Compras">Comprar Produtos</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="Produtos">
+            <h2>Lista de Produtos</h2>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                        <th>Disponibilidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <figure>
+                                <img src="https://cdn-icons-png.flaticon.com/512/186/186239.png" width="50px">
+                                <figcaption>
+                                    Smartphone
+                                </figcaption>
+                            </figure>
+                        </td>
+                        <td>Smartphone Samsung</td>
+                        <td>R$ 2.999,00</td>
+                        <td rowspan="2">Em estoque</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <figure>
+                                <img src="https://cdn-icons-png.flaticon.com/512/1023/1023572.png" width="50px">
+                                <figcaption>
+                                    Smart TV
+                                </figcaption>
+                            </figure>
+                        </td>
+                        <td>Smart TV LG '50'</td>
+                        <td>R$ 4.999,00</td>
+                        <!-- <td>Em estoque</td> -->
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <figure>
+                                <img src="https://cdn-icons-png.flaticon.com/512/421/421016.png" width="50px">
+                                <figcaption>
+                                    Smart Watch
+                                </figcaption>
+                            </figure>
+                        </td>
+                        <!-- <td>Relogio Smartwatch</td>
+                        <td>R$ 659,00</td> -->
+                        <td colspan="3">Indisponível</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </section>
+        <section id="Compras">
+            <h2>Formulário de Compra</h2>
+
+            <form>
+                <input type="text" placeholder="Compra no site" required readonly>
+                <br><br>
+
+                <label>Nome:</label>
+                <input type="text" name="nome" required autofocus size="35">
+                <br><br>
+
+                <label>E-mail:</label>
+                <input type="email" placeholder="user@email.com" required>
+                <br><br>
+
+                <label>Senha</label>
+                <input type="password">
+                <br><br>
+
+                <label>Telefone:</label>
+                <input type="tel" pattern="^(\d{2})\d{5}-\d{4}$" placeholder="(00)99999-9999" maxlength="14">
+
+                <br><br>
+
+                <label>Produto:</label>
+                <select>
+                    <optgroup label="Telefonia">
+                        <option>Smartphone LG</option>
+                        <option>Smartphone Motorola</option>
+                    </optgroup>
+                    <optgroup label="TVs">
+                        <option>Smart TV</option>
+                    </optgroup>
+                    <optgroup>
+                        <option>Smart Watch</option>
+                    </optgroup>
+                </select>
+                <br><br>
+
+                <label>Quantidade:</label>
+                <input type="number" min="1" max="10">
+                <br><br>
+
+                <label for="end">Endereço de entrega:</label>
+                <br>
+                <textarea id="end" cols="40" rows="5"></textarea>
+                <br><br>
+
+                <fieldset>
+                    <legend>Fora de Pagamento</legend>
+                    <input type="radio" id="cc" name="pag">
+                    <label for="cc">Cartão de Crédito</label>
+                    <br>
+                    <input type="radio" id="bol" name="pag">
+                    <label for="bol">Boleto</label>
+                    <br>
+                    <input type="radio" id="pix" name="pag">
+                    <label for="pix">Pix</label>
+                    <br>
+                </fieldset>
+                <br><br>
+
+                <fieldset>
+                    <legend>Opções Adicionais</legend>
+                    <input type="checkbox" id="add1" name="add1">
+                    <label for="add1">Embalagem para presente</label>
+                    <br>
+                    <input type="checkbox" id="add2" name="add2">
+                    <label for="add2">Garantia Estendida</label>
+                    <br>
+                    <input type="checkbox" id="add3" name="add3">
+                    <label for="add3">Receber ofertas</label>
+                    <br>
+                </fieldset>
+                <br><br>
+
+                <label>Comprovante de pagamento:</label><br>
+                <input type="file" multiple>
+                <br><br>
+
+                <br><br>
+                <input type="submit" value="Comprar">
+                <input type="reset" value="Cancelar">
+                <!-- <input type="button" value="Enviar"> -->
+
+            </form>
+        </section>
+        <br><br>
+        <a href="#topo">Voltar ao Topo</a>
+    </main>
+
+    <footer>
+        <h5>&copy;2025 Nossa Loja Online. Todos os direitos reservados.</h5>
+    </footer>
+</body>
+
+</html>
+
+
+

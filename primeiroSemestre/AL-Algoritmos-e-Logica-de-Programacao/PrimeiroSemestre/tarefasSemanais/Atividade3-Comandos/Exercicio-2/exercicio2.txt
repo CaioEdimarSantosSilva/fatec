@@ -1,0 +1,24 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		/*2 - Crie um programa que permita ao usuário entrar com dois números. Executar as quatro operações com esses 
+		dois números (Soma, Subtração, multiplicação, divisão). Não se esquecer de mostrar as respostas na tela.*/
+		double  num1, num2, soma, subtracao, multiplicacao, divisao;
+		Console.Write("Digite o primeiro número: ");
+        num1 = Convert.ToDouble(Console.ReadLine());
+        Console.Write("Digite o segundo número: ");
+        num2 = Convert.ToDouble(Console.ReadLine());
+		soma = num1 + num2;
+		Console.WriteLine("A soma entre " + num1 + " e " + num2 + " é "  + soma);
+		subtracao = num1 - num2;
+		Console.WriteLine("A subtração entre " + num1 + " e " + num2 + " é "  + subtracao);
+		multiplicacao = num1 * num2;
+		Console.WriteLine("A multiplicação entre " + num1 + " e " + num2 + " é "  + multiplicacao);
+		divisao = num1 * num2;
+		Console.WriteLine("A divisão entre " + num1 + " e " + num2 + " é "  + divisao);
+		Console.ReadKey();
+	}
+}

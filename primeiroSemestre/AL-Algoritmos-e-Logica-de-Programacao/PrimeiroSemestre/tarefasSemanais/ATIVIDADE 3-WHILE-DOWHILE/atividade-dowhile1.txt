@@ -1,0 +1,18 @@
+public class Program
+{
+	public static void Main()
+	{//1 - Crie um programa e fluxograma que, utilizando a estrutura “Do While”, permita que o usuário digite um numero, este número deve ser par, mostrar na tela o número digitado.
+ 	//Não permitir que o usuário digite um número que não seja par.
+    int numero;
+    do
+    {
+        Console.Write("Qual o seu numero? ");
+        numero = Convert.ToInt32(Console.ReadLine());
+        if (numero % 2 == 0)
+        {
+            Console.WriteLine("O numero " + numero + " é par!");
+        }
+    } while (numero % 2 == 0);
+    Console.ReadKey();
+}
+}

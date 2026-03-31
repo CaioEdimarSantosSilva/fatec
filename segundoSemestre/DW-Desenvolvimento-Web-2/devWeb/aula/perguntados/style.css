@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Oldenburg&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: url("imagem.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+  font-family: "Oldenburg", serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  background: #0000005c;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+}
+
+h2 {
+  text-align: center;
+  color: gold;
+  font-size: 4em;
+  margin: 0;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+}
+
+select {
+  background-color: #0f1429;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+  font-size: 1.5em;
+}
+
+.botao {
+  background-color: goldenrod;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5em;
+  width: 100%;
+}
+
+.botao:hover {
+  background-color: darkgoldenrod;
+}
+
+.pergunta_form {
+  font-size: 1.2em;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 1em;
+}
+
+h3 {
+  color: gold;
+  font-size: 2.5em;
+  margin: 0;
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ffffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 5em;
+  padding: 0;
+  margin-bott: 10px;
+}
+
+input[type="radio"]:checked {
+  background-color: goldenrod;
+}
+
+.escolha_tema {
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+}
+
+.cabecario_perguntas {
+  display: flex;
+  justify-content: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.grid_pergunta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.item_pergunta {
+  padding: 5px 10px;
+  border: 2px solid goldenrod;
+  border-radius: 15px;
+  background-color: #00000041;
+  font-size: 1em;
+}
+
+.item_pergunta p {
+  color: gold;
+}
+
+.resposta-correta {
+  background-color: #15ff002d !important;
+  border: 1px solid #28a745 !important;
+  padding-top: 1px;
+  padding-right: 2px;
+  border-radius: 15px;
+}
+
+body:has(.pergunta_form) > form:first-of-type {
+  display: none;
+}

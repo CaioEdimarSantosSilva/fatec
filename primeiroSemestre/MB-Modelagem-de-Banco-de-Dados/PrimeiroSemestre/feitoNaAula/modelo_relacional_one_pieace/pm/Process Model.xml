@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="6F28BBCC-9005-1252-D4A3-E75BA5DC5DC6">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:38:27 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

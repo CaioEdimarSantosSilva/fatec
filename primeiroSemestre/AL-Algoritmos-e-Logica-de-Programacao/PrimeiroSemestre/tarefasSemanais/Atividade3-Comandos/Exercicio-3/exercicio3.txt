@@ -1,0 +1,17 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		//3 - Desenvolva um programa e fluxograma para calcular a idade de uma pessoa, entrando com o ano de nascimento e ano atual.
+		int anoNacimento, anoAtual, idade;
+		Console.Write("Qual seu ano de nacimento? ");
+		anoNacimento = Convert.ToInt32(Console.ReadLine());
+		Console.Write("Qual o ano atual? ");
+		anoAtual = Convert.ToInt32(Console.ReadLine());
+		idade = anoAtual - anoNacimento;
+		Console.WriteLine("Você tem " + idade + " anos de idade!");
+		Console.ReadKey();
+	}
+}

@@ -1,0 +1,28 @@
+{//4-Ler um vetor Q de 20 posições (aceitar somente números positivos). Escrever a seguir o valor do maior
+//elemento de Q e a respectiva posição que ele ocupa no vetor.
+        double[] Q = new double[20];
+        for (int i = 0; i < 20; i++)
+        {
+            do
+            {
+                Console.Write("Digite o " + (i + 1) + "º número positivo: ");
+                Q[i] = Convert.ToDouble(Console.ReadLine());
+            } while (Q[i] <= 0);
+        }
+        double maior = Q[0];
+        int posicao = 0;
+
+        for (int i = 1; i < 20; i++)
+        {
+            if (Q[i] > maior)
+            {
+                maior = Q[i];
+                posicao = i;
+            }
+        }
+
+        Console.Write("Maior: " + (maior));
+        Console.Write("Posição: " + (posicao + 1));
+    
+    Console.ReadKey();
+}

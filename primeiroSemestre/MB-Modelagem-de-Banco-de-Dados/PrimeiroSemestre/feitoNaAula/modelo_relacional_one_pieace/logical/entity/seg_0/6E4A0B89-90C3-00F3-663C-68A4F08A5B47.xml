@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6E4A0B89-90C3-00F3-663C-68A4F08A5B47" name="CHARACTER">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:39:10 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_character" id="5A33EA1E-E471-F8EC-7A4E-DB8449D9ECD9">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:39:21 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_character" id="1386EEAC-7A30-D7B0-24B7-F2BB1AE6C504">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:41:04 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_crew" id="DC81526A-D308-E72B-6648-69761AAC1526">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:06 UTC</createdTime>
+<generatorID>9AF87473-FB45-1D6A-08D8-D14514385672</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<referedAttribute>E56FA792-93CA-82D8-89D9-A455C6357A12</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_fruit" id="C7CC56F5-6BF2-DEAD-A099-A4A2E5F9AC59">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:41 UTC</createdTime>
+<generatorID>D73E5A9D-59BD-A9B1-9EF6-F13C6D7C85C9</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="true"/>
+</engineerTo>
+<referedAttribute>C7D1CC9F-AB1B-A25E-7A48-EA96898F9312</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3DAB5A29-5DE7-3604-9601-0753FF2CED2B" name="CHARACTER PK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:39:42 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="899AA855-4706-15B1-BC2F-C123669C5450" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5A33EA1E-E471-F8EC-7A4E-DB8449D9ECD9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

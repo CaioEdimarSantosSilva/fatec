@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9867FFA1-FBC1-B281-DFA9-3E71DF9A9E68" name="CHARACTER">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>6E4A0B89-90C3-00F3-663C-68A4F08A5B47</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_character" id="D76C1329-6BAB-7CEC-B7D2-C4958220005E">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>5A33EA1E-E471-F8EC-7A4E-DB8449D9ECD9</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_character" id="8076DAAA-37C0-A579-E149-6C25BF3C848E">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>1386EEAC-7A30-D7B0-24B7-F2BB1AE6C504</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CREW_id_crew" id="A7A0F3FC-49F3-B81C-AE86-398F22CF2ED4">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>DC81526A-D308-E72B-6648-69761AAC1526</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="31ADDF7E-BF2D-9563-1F68-354CFB6A3C82" referredColumn="37392A67-D5A1-5911-499C-53795E3EEEE1"/>
+</associations>
+</Column>
+<Column name="FRUIT_id_fruit" id="FBCB70F8-9615-4E43-00C3-42C2707A2F96">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>C7CC56F5-6BF2-DEAD-A099-A4A2E5F9AC59</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="79C974E2-D555-7CCB-7E84-2C0D56C1D16A" referredColumn="3BE6776A-ECD7-A25B-1228-2E972DF21193"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B7A42298-95E7-5C1C-A2AF-F138D210A955" name="CHARACTER_PK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>3DAB5A29-5DE7-3604-9601-0753FF2CED2B</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D76C1329-6BAB-7CEC-B7D2-C4958220005E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CF2BE10B-A0CA-1807-9A3D-E83624DCFDB5" name="CHARACTER__IDX">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>D73E5A9D-59BD-A9B1-9EF6-F13C6D7C85C9</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="FBCB70F8-9615-4E43-00C3-42C2707A2F96"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FAE53F56-9235-19ED-432D-34D2D8ACE9D1" name="CHARACTER_FRUIT_FK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>D73E5A9D-59BD-A9B1-9EF6-F13C6D7C85C9</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FBCB70F8-9615-4E43-00C3-42C2707A2F96"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F5672A39-4E4C-6504-6620-C62A3A1166D1" name="CHARACTER_CREW_FK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:54:59 UTC</createdTime>
+<generatorID>9AF87473-FB45-1D6A-08D8-D14514385672</generatorID>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7A0F3FC-49F3-B81C-AE86-398F22CF2ED4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

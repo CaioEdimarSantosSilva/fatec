@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Design>
+  <LogicalModel>
+    <Table name="CHARACTER">
+      <Column name="id_character" type="INT" primaryKey="true"/>
+      <Column name="nm_character" type="VARCHAR(100)"/>
+      <Column name="id_fruit" type="INT" foreignKey="true" nullable="true" references="FRUIT.id_fruit"/>
+      <Column name="id_crew" type="INT" foreignKey="true" nullable="true" references="CREW.id_crew"/>
+    </Table>
+    <Table name="FRUIT">
+      <Column name="id_fruit" type="INT" primaryKey="true"/>
+      <Column name="nm_fruit" type="VARCHAR(100)"/>
+      <Column name="nm_type_fruit" type="VARCHAR(50)"/>
+    </Table>
+    <Table name="HAKI">
+      <Column name="id_haki" type="INT" primaryKey="true"/>
+      <Column name="nm_haki" type="VARCHAR(100)"/>
+      <Column name="nm_type_haki" type="VARCHAR(50)"/>
+    </Table>
+    <Table name="CREW">
+      <Column name="id_crew" type="INT" primaryKey="true"/>
+      <Column name="nm_crew" type="VARCHAR(100)"/>
+      <Column name="nm_ship_crew" type="VARCHAR(100)"/>
+    </Table>
+    <Table name="CHARACTER_HAKI">
+      <Column name="id_character" type="INT" primaryKey="true" foreignKey="true" references="CHARACTER.id_character"/>
+      <Column name="id_haki" type="INT" primaryKey="true" foreignKey="true" references="HAKI.id_haki"/>
+      <Column name="nm_level_character_haki" type="VARCHAR(100)"/>
+    </Table>
+  </LogicalModel>
+</Design>

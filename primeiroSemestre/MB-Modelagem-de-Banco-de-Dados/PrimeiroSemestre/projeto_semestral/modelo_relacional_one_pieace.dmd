@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modelo_relacional_one_pieace" id="878B8409-B1DA-F0A6-FBC0-0F076E4618AF" version="3.5">
+<createdBy>caiof</createdBy>
+<createdTime>2025-06-04 01:38:27 UTC</createdTime>
+<ownerDesignName>modelo_relacional_one_pieace</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>878B8409-B1DA-F0A6-FBC0-0F076E4618AF</designId>
+</OSDM_Design>
