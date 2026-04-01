@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7BBF8B20-7CB3-F58A-B70F-822E5BEF34DD" name="REDE_SOCIAL">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>B448A682-C0C5-4E05-6E45-2E42D5D94BC6</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_rede_social" id="C7B894B0-3AE6-E6F5-DAA0-9F99443602CB">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>CC3FEB20-16AF-1B7D-E11E-78FDBBD2E8B7</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_url_rede_social" id="082841AC-1A41-90E5-7CAB-BC9A6C17F4F7">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>23903985-E994-29E2-C676-10E3DE4C1028</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_plataforma_social" id="22741469-AD2E-F75B-FF5F-3DC7F18A7CBB">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>BC0EE017-0920-7AC1-5685-FA867502DE80</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_ativo_rede_social" id="C808F8EE-0879-3690-AA9C-53C7D1974863">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>EB9C89F8-9A0B-7712-417E-794822371724</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMPRESA_id_empresa" id="5526CD42-B120-58F3-9581-7276EF002982">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>A917F10E-3B6D-0D07-C06D-358555FEDE66</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7DD1DF50-142A-F7B8-01D0-4CFC7BFE8DF2" referredColumn="3CE77AC7-ABA2-53EE-0BAC-A222C0050497"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="327D309F-11BC-A34B-5514-95D1777CEC11" name="REDE_SOCIAL_PK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>91EA8FC0-4D27-4555-572B-13F9BA471FFE</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C7B894B0-3AE6-E6F5-DAA0-9F99443602CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0A702CAA-B0DC-6E5D-4E67-190CE7593A1D" name="REDE_SOCIAL_EMPRESA_FK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>81FCD668-3A20-D223-8D28-CF9462154D61</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5526CD42-B120-58F3-9581-7276EF002982"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,148 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1C42A700-C889-DBC8-A445-0A053B6B130D" name="EMPRESA">
+<createdBy>João Pedro</createdBy>
+<createdTime>2025-08-21 21:11:51 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_empresa" id="58A91D28-1331-0A7C-15FD-9DB9F95B8255">
+<createdBy>João Pedro</createdBy>
+<createdTime>2025-08-21 21:12:01 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_email_empresa" id="3F1C4D0B-AECD-7EFE-3D74-9CE141362E4A">
+<createdBy>João Pedro</createdBy>
+<createdTime>2025-08-21 21:12:33 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_email_secundario_empresa" id="5694603A-14DE-6DB0-FC5E-D95D3104848B">
+<createdBy>João Pedro</createdBy>
+<createdTime>2025-08-21 21:13:04 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_telefone_empresa" id="209B6848-3D82-A899-33CE-46E2A3359B95">
+<createdBy>João Pedro</createdBy>
+<createdTime>2025-08-21 21:13:43 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_telefone_secundario_empresa" id="3FEA8A85-C4E6-45BA-E073-A726820FA4B9">
+<createdBy>João Pedro</createdBy>
+<createdTime>2025-08-21 21:14:12 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_endereco_empresa" id="4B28F2B2-EE48-82AB-260E-1E251B548734">
+<createdBy>João Pedro</createdBy>
+<createdTime>2025-08-21 21:16:42 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_sobre_empresa" id="9B65ACB5-DE8B-A886-AC09-F7B476EB98FD">
+<createdBy>João Pedro</createdBy>
+<createdTime>2025-08-21 21:17:38 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_cnpj" id="43DB853A-380D-229C-2C93-E1679B9EA180">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:37:26 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>14</dataTypePrecision>
+<ownDataTypeParameters>,14,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_empresa" id="68C511C3-1728-E8AF-91F2-7ED2C8700C0B">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:38:35 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="282CC315-5C6B-3E7C-96B7-BB48A18CA05F" name="ADM PK">
+<createdBy>João Pedro</createdBy>
+<createdTime>2025-08-21 21:12:13 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>58A91D28-1331-0A7C-15FD-9DB9F95B8255</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

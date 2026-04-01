@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="ECF26FC5-28DF-6AAE-08FF-F68084E05C14" containerWithKeyObject="C658654A-0F20-4ED2-4115-F232D8C698F7" localFKIndex="6EF90A64-F8B1-5D84-32D2-C935D93D77C1" name="PAGAMENTO_EMPRESA_FK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>CCB3A22A-E531-CD64-80F2-A8DE3CA74A6D</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<referredTableLongName>EMPRESA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>DDF9DBB9-AD2B-8FDB-F974-202CEB1DA996</referredTableID>
+<keyObject>C5C10BDC-6885-0D76-602C-C5405DAA0C9E</keyObject>
+<referredKeyID>C5C10BDC-6885-0D76-602C-C5405DAA0C9E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_empresa</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

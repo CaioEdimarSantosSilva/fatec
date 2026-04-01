@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8307967A-FE4A-4698-20E8-E39E2AA7176A" name="SERVICO">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>D8F2AEB7-A5BB-9193-97E2-CECE65A65FAB</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_servico" id="8413AD63-3C52-4C04-B387-D9ECD4435A43">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>81E3901C-9582-42B2-4D71-2DA891AEAE18</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_servico" id="9E1C98BB-E2E4-90E2-F8AD-F682663FD22B">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>D0BA17C0-60B5-BE0F-7A1D-BBA22F46F5BF</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vl_valor_servico" id="C8BD512A-73AF-BE46-011F-E3380D44E19A">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>1D5147BB-3865-20BB-FECF-4F4D7D77B94B</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_imagem_path_servico" id="20FEF7AF-0349-F131-34BE-47FD26CE775A">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>CA23F272-9594-D9B1-BECF-3F049CC7FA0E</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_servico" id="5B13A234-A79F-C816-5D42-182B202151EB">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>E9C8AD38-9DA0-8916-526A-809D78F79DCA</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_ativo_servico" id="23F7926B-F1B8-8DCB-689B-F30D6CDF4648">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>ED827E2E-523F-4962-B9D4-C4C03B42564C</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6ECE1A89-FFC0-3C09-4930-2496515CD6A4" name="SERVICO_PK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>4E41C4BF-7D7A-054D-5D3C-780BF50DDC7E</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8413AD63-3C52-4C04-B387-D9ECD4435A43"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

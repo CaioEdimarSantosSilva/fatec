@@ -1,0 +1,146 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C2578BF1-9283-E3B2-93A7-9189D5396064" name="PRODUTO">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>DBA1A177-D718-A23B-8951-4C110D804A24</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_produto" id="B30A4817-A451-4CC0-A994-7DD90D474974">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>85AED010-4100-8747-1589-1B4B8E637998</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_produto" id="ECF525A5-30FD-09F7-53AB-39CF3005E574">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>9B0E4600-4221-99F0-5977-A6505194B548</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_categoria_produto" id="8F9469CE-655E-6A33-08AB-AF03847D83AE">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>117CFCA4-C272-3250-9B3A-FDA358A2FD31</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_ativo_produto" id="66A54280-BA3F-95B8-ECC9-DC3CD449D766">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>509F2C27-914B-9F6C-ECB8-7133EC434135</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="qt_estoque" id="B2FD33BD-7E3A-F7B4-D9DF-9ADB190F3525">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>6E313434-8BF0-6A5E-CA94-7C508ED728A5</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="vl_valor_produto" id="033639DE-43FF-31BA-E290-DBBF7BE2C860">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>5BCB73AD-C3A0-FB2B-3A1C-01391DCB57F2</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_produto" id="71561FF8-1B17-D65E-BA45-CCCC40B94E66">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>8CD3CE25-8ADA-2356-5212-6A88C9C25A14</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_imagem_path_produto" id="4C09BF27-82F9-71E6-022A-4B52195710FC">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>B323B928-D56B-773A-7593-037C287CD570</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ITEM_PEDIDO_PEDIDO_id_pedido" id="077B8163-F69F-18AD-CF70-09927F1698A6">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:16:02 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ITEM_PEDIDO_CURSO_id_curso" id="2F19E541-2A0E-761C-AEBA-0A277B97FE1B">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:16:02 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1174B874-F826-0AB7-A1B5-B27AF66F88C6" name="PRODUTO_PK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>F1D3100C-56F1-1389-905B-8DC56D41C427</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B30A4817-A451-4CC0-A994-7DD90D474974"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

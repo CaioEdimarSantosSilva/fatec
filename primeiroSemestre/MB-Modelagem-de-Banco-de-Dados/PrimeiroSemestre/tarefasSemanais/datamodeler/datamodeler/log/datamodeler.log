@@ -1,0 +1,287 @@
+2025-05-05 20:59:32 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-05-10 12:39:29 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-05-10 20:53:18 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-05-10 20:57:48 SEVERE - Unable to load object from XML: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Exercício2_Banco_Dados_Logico\mapping\ExtendedMap.xml
+java.io.FileNotFoundException: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Exercício2_Banco_Dados_Logico\mapping\ExtendedMap.xml (O sistema não pode encontrar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at oracle.dbtools.crest.model.metadata.XMLToObjectTransformer.transformToObject(XMLToObjectTransformer.java:134)
+	at oracle.dbtools.crest.model.metadata.XMLToObjectTransformer.transformToObject(XMLToObjectTransformer.java:129)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.transformFromXMLToObject(XMLTransformationManager.java:1872)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.transformFromXMLToObject(XMLTransformationManager.java:1820)
+	at oracle.dbtools.crest.model.design.Design.openDesign(Design.java:1672)
+	at oracle.dbtools.crest.swingui.ControllerApplication$1.run(ControllerApplication.java:2512)
+2025-05-10 20:58:26 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-05-10 20:58:46 SEVERE - Problem with design /files directory /nC:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Exercício2_Banco_Dados\dl_settings\files
+2025-05-10 20:58:52 SEVERE - getDataInputStream: Can not read data
+java.io.FileNotFoundException: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Exercício2_Banco_Dados\dl_settings\rdbms\dl_settings_RDBMSSites.xml (O sistema não pode encontrar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStream(FileManager.java:295)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStreamWithoutExtension(FileManager.java:264)
+	at oracle.dbtools.crest.model.persistence.XMLPersistenceManager.getInputStreamFor(XMLPersistenceManager.java:898)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.getInputStreamFor(AbstractXMLReader.java:216)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.recreateObject(AbstractXMLReader.java:143)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.handleRecreateObject(AbstractXMLReader.java:108)
+	at oracle.dbtools.crest.model.persistence.XMLPersistenceManager.read(XMLPersistenceManager.java:538)
+	at oracle.dbtools.crest.model.design.Design.loadRDBMSSites(Design.java:2159)
+	at oracle.dbtools.crest.model.design.Design.openDesign(Design.java:1532)
+	at oracle.dbtools.crest.swingui.ControllerApplication$1.run(ControllerApplication.java:2512)
+2025-05-10 20:58:52 SEVERE - Data inputstream is null (path: dl_settings/rdbms name: dl_settings_RDBMSSites)
+2025-05-10 20:58:52 SEVERE - No reader for: java.lang.String
+2025-05-10 20:58:52 SEVERE - getDataInputStream: Can not read data
+java.io.FileNotFoundException: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Exercício2_Banco_Dados\dl_settings\businessinfo\Business Information.xml (O sistema não pode encontrar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStream(FileManager.java:295)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStreamWithoutExtension(FileManager.java:264)
+	at oracle.dbtools.crest.model.persistence.XMLPersistenceManager.getInputStreamFor(XMLPersistenceManager.java:898)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.getInputStreamFor(AbstractXMLReader.java:216)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.recreateDesign(AbstractXMLReader.java:192)
+	at oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign.load(BusinessInfoDesign.java:126)
+	at oracle.dbtools.crest.model.design.Design.openDesign(Design.java:1556)
+	at oracle.dbtools.crest.swingui.ControllerApplication$1.run(ControllerApplication.java:2512)
+2025-05-10 20:58:52 SEVERE - Data inputstream is null (path: dl_settings/businessinfo name: Business Information)
+2025-05-10 20:58:52 SEVERE - getDataInputStream: Can not read data
+java.io.FileNotFoundException: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Exercício2_Banco_Dados\dl_settings\datatypes\DataTypes.xml (O sistema não pode encontrar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStream(FileManager.java:295)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStreamWithoutExtension(FileManager.java:264)
+	at oracle.dbtools.crest.model.persistence.XMLPersistenceManager.getInputStreamFor(XMLPersistenceManager.java:898)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.getInputStreamFor(AbstractXMLReader.java:216)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.recreateDesign(AbstractXMLReader.java:192)
+	at oracle.dbtools.crest.model.design.datatypes.DataTypesDesign.load(DataTypesDesign.java:268)
+	at oracle.dbtools.crest.model.design.Design.openDesign(Design.java:1566)
+	at oracle.dbtools.crest.swingui.ControllerApplication$1.run(ControllerApplication.java:2512)
+2025-05-10 20:58:52 SEVERE - Data inputstream is null (path: dl_settings/datatypes name: DataTypes)
+2025-05-10 20:58:52 SEVERE - getDataInputStream: Can not read data
+java.io.FileNotFoundException: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Exercício2_Banco_Dados\dl_settings\logical\Logical.xml (O sistema não pode encontrar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStream(FileManager.java:295)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStreamWithoutExtension(FileManager.java:264)
+	at oracle.dbtools.crest.model.persistence.XMLPersistenceManager.getInputStreamFor(XMLPersistenceManager.java:898)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.getInputStreamFor(AbstractXMLReader.java:216)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.recreateDesign(AbstractXMLReader.java:192)
+	at oracle.dbtools.crest.model.design.DesignPart.load(DesignPart.java:522)
+	at oracle.dbtools.crest.model.design.Design.openDesign(Design.java:1575)
+	at oracle.dbtools.crest.swingui.ControllerApplication$1.run(ControllerApplication.java:2512)
+2025-05-10 20:58:52 SEVERE - Data inputstream is null (path: dl_settings/logical name: Logical)
+2025-05-10 20:58:52 SEVERE - getDataInputStream: Can not read data
+java.io.FileNotFoundException: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Exercício2_Banco_Dados\dl_settings\mapping\ExtendedMap.xml (O sistema não pode encontrar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStream(FileManager.java:295)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStreamWithoutExtension(FileManager.java:264)
+	at oracle.dbtools.crest.model.persistence.XMLPersistenceManager.getInputStreamFor(XMLPersistenceManager.java:898)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.getInputStreamFor(AbstractXMLReader.java:216)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.recreateDesign(AbstractXMLReader.java:192)
+	at oracle.dbtools.crest.model.xtdmapping.ExtendedMapBase.load(ExtendedMapBase.java:410)
+	at oracle.dbtools.crest.model.design.Design.openDesign(Design.java:1670)
+	at oracle.dbtools.crest.swingui.ControllerApplication$1.run(ControllerApplication.java:2512)
+2025-05-10 20:58:52 SEVERE - Data inputstream is null (path: dl_settings/mapping name: ExtendedMap)
+2025-05-10 20:58:52 SEVERE - getDataInputStream: Can not read data
+java.io.FileNotFoundException: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Exercício2_Banco_Dados\dl_settings\processmodel\4C6758BC-5719-0ECA-A3C0-482EFA703B5E.xml (O sistema não pode encontrar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStream(FileManager.java:295)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStreamWithoutExtension(FileManager.java:264)
+	at oracle.dbtools.crest.model.persistence.XMLPersistenceManager.getInputStreamFor(XMLPersistenceManager.java:898)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.getInputStreamFor(AbstractXMLReader.java:216)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.recreateDesign(AbstractXMLReader.java:192)
+	at oracle.dbtools.crest.model.design.process.ProcessModel.load(ProcessModel.java:594)
+	at oracle.dbtools.crest.model.design.Design.openDesign(Design.java:1717)
+	at oracle.dbtools.crest.swingui.ControllerApplication$1.run(ControllerApplication.java:2512)
+2025-05-10 20:58:52 SEVERE - Data inputstream is null (path: dl_settings/processmodel name: 4C6758BC-5719-0ECA-A3C0-482EFA703B5E)
+2025-05-10 20:58:52 SEVERE - getDataInputStream: Can not read data
+java.io.FileNotFoundException: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Exercício2_Banco_Dados\dl_settings\processmodel\dataflows\A3A11EC7-293C-8A5E-C0B9-DC612D40C154.xml (O sistema não pode encontrar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStream(FileManager.java:295)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStreamWithoutExtension(FileManager.java:264)
+	at oracle.dbtools.crest.model.persistence.XMLPersistenceManager.getInputStreamFor(XMLPersistenceManager.java:898)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.getInputStreamFor(AbstractXMLReader.java:216)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.recreateDesign(AbstractXMLReader.java:192)
+	at oracle.dbtools.crest.model.design.process.DataFlowDesign.load(DataFlowDesign.java:562)
+	at oracle.dbtools.crest.model.design.Design.openDesign(Design.java:1739)
+	at oracle.dbtools.crest.swingui.ControllerApplication$1.run(ControllerApplication.java:2512)
+2025-05-10 20:58:52 SEVERE - Data inputstream is null (path: dl_settings/processmodel/dataflows name: A3A11EC7-293C-8A5E-C0B9-DC612D40C154)
+2025-05-10 20:59:14 SEVERE - Unable to load object from XML: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Exercício2_Banco_Dados_Logico\mapping\ExtendedMap.xml
+java.io.FileNotFoundException: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Exercício2_Banco_Dados_Logico\mapping\ExtendedMap.xml (O sistema não pode encontrar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at oracle.dbtools.crest.model.metadata.XMLToObjectTransformer.transformToObject(XMLToObjectTransformer.java:134)
+	at oracle.dbtools.crest.model.metadata.XMLToObjectTransformer.transformToObject(XMLToObjectTransformer.java:129)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.transformFromXMLToObject(XMLTransformationManager.java:1872)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.transformFromXMLToObject(XMLTransformationManager.java:1820)
+	at oracle.dbtools.crest.model.design.Design.openDesign(Design.java:1672)
+	at oracle.dbtools.crest.swingui.ControllerApplication$1.run(ControllerApplication.java:2512)
+2025-05-10 20:59:26 SEVERE - java.lang.NullPointerException
+2025-05-10 21:00:34 SEVERE - getDataInputStream: Can not read data
+java.io.FileNotFoundException: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Exercício2_Banco_Dados_Logico\rdbms\Exercício2_Banco_Dados_RDBMSSites.xml (O sistema não pode encontrar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStream(FileManager.java:295)
+	at oracle.dbtools.crest.model.persistence.FileManager.getDataInputStreamWithoutExtension(FileManager.java:264)
+	at oracle.dbtools.crest.model.persistence.XMLPersistenceManager.getInputStreamFor(XMLPersistenceManager.java:898)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.getInputStreamFor(AbstractXMLReader.java:216)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.recreateObject(AbstractXMLReader.java:143)
+	at oracle.dbtools.crest.model.persistence.xml.AbstractXMLReader.handleRecreateObject(AbstractXMLReader.java:108)
+	at oracle.dbtools.crest.model.persistence.XMLPersistenceManager.read(XMLPersistenceManager.java:538)
+	at oracle.dbtools.crest.imports.cwddesigner.CWDExtractionController.importRDBMSSites(CWDExtractionController.java:599)
+	at oracle.dbtools.crest.imports.cwddesigner.CWDExtractionController$Runner2.run(CWDExtractionController.java:194)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-05-10 21:00:34 SEVERE - Data inputstream is null (path: Exercício2_Banco_Dados_Logico/rdbms name: Exercício2_Banco_Dados_RDBMSSites)
+2025-05-10 21:00:34 SEVERE - Error Generate Design: Sem título_1
+java.lang.NullPointerException
+	at oracle.dbtools.crest.imports.cwddesigner.CWDExtractionController.importRDBMSSites(CWDExtractionController.java:601)
+	at oracle.dbtools.crest.imports.cwddesigner.CWDExtractionController$Runner2.run(CWDExtractionController.java:194)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-05-11 08:49:08 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-05-11 08:49:40 SEVERE - Unable to load object from XML: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Exercício2_Banco_Dados_Logico\mapping\ExtendedMap.xml
+java.io.FileNotFoundException: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Exercício2_Banco_Dados_Logico\mapping\ExtendedMap.xml (O sistema não pode encontrar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at oracle.dbtools.crest.model.metadata.XMLToObjectTransformer.transformToObject(XMLToObjectTransformer.java:134)
+	at oracle.dbtools.crest.model.metadata.XMLToObjectTransformer.transformToObject(XMLToObjectTransformer.java:129)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.transformFromXMLToObject(XMLTransformationManager.java:1872)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.transformFromXMLToObject(XMLTransformationManager.java:1820)
+	at oracle.dbtools.crest.model.design.Design.openDesign(Design.java:1672)
+	at oracle.dbtools.crest.swingui.ControllerApplication$Recent$1.run(ControllerApplication.java:5085)
+2025-06-03 22:55:21 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-06-03 23:29:29 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-06-03 23:41:55 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-06-03 23:47:48 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-06-04 22:02:56 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-06-04 22:17:43 SEVERE - Error select design file 
+oracle.dbtools.raptor.ui.URLFileChooser$URLFileChooserException: approveSelection failed for file:/C:/Users/Carlos Eduardo/OneDrive/Área de Trabalho/Exercício2_Banco_Dados_Logico/
+	at oracle.dbtools.raptor.ui.URLFileChooser.adjustSelectedURL(URLFileChooser.java:725)
+	at oracle.dbtools.raptor.ui.URLFileChooser.showSaveDialog(URLFileChooser.java:289)
+	at oracle.dbtools.raptor.ui.URLFileChooser.showSaveDialog(URLFileChooser.java:264)
+	at oracle.dbtools.crest.swingui.ApplicationView.selectDesignName(ApplicationView.java:1890)
+	at oracle.dbtools.crest.swingui.ControllerApplication.saveAsDesign(ControllerApplication.java:3763)
+	at oracle.dbtools.crest.swingui.ControllerApplication$SaveAs$1.run(ControllerApplication.java:3739)
+2025-06-04 22:22:06 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-06-04 23:13:00 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-06-04 23:13:04 SEVERE - Unable to load object from XML: E:\Faculdade\1-Semestre\MB-Modelagem em Banco de Dados\PROJETO_MBD\Projeto_MBD_Modelo_Logico\mapping\ExtendedMap.xml
+java.io.FileNotFoundException: E:\Faculdade\1-Semestre\MB-Modelagem em Banco de Dados\PROJETO_MBD\Projeto_MBD_Modelo_Logico\mapping\ExtendedMap.xml (O sistema não pode encontrar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at oracle.dbtools.crest.model.metadata.XMLToObjectTransformer.transformToObject(XMLToObjectTransformer.java:134)
+	at oracle.dbtools.crest.model.metadata.XMLToObjectTransformer.transformToObject(XMLToObjectTransformer.java:129)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.transformFromXMLToObject(XMLTransformationManager.java:1872)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.transformFromXMLToObject(XMLTransformationManager.java:1820)
+	at oracle.dbtools.crest.model.design.Design.openDesign(Design.java:1672)
+	at oracle.dbtools.crest.swingui.ControllerApplication$1.run(ControllerApplication.java:2512)
+2025-06-04 23:14:12 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-06-04 23:16:05 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-06-04 23:17:32 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-06-04 23:29:49 SEVERE - Error select design file 
+oracle.dbtools.raptor.ui.URLFileChooser$URLFileChooserException: approveSelection failed for file:/C:/Users/Carlos Eduardo/OneDrive/Área de Trabalho/Exercício2_Banco_Dados_Logico/
+	at oracle.dbtools.raptor.ui.URLFileChooser.adjustSelectedURL(URLFileChooser.java:725)
+	at oracle.dbtools.raptor.ui.URLFileChooser.showSaveDialog(URLFileChooser.java:289)
+	at oracle.dbtools.raptor.ui.URLFileChooser.showSaveDialog(URLFileChooser.java:264)
+	at oracle.dbtools.crest.swingui.ApplicationView.selectDesignName(ApplicationView.java:1890)
+	at oracle.dbtools.crest.swingui.ControllerApplication.saveAsDesign(ControllerApplication.java:3763)
+	at oracle.dbtools.crest.swingui.ControllerApplication$SaveAll$1.run(ControllerApplication.java:2967)
+2025-06-04 23:30:23 SEVERE - Error select design file 
+oracle.dbtools.raptor.ui.URLFileChooser$URLFileChooserException: approveSelection failed for file:/C:/Users/Carlos Eduardo/OneDrive/Área de Trabalho/Exercício2_Banco_Dados_Logico/
+	at oracle.dbtools.raptor.ui.URLFileChooser.adjustSelectedURL(URLFileChooser.java:725)
+	at oracle.dbtools.raptor.ui.URLFileChooser.showSaveDialog(URLFileChooser.java:289)
+	at oracle.dbtools.raptor.ui.URLFileChooser.showSaveDialog(URLFileChooser.java:264)
+	at oracle.dbtools.crest.swingui.ApplicationView.selectDesignName(ApplicationView.java:1890)
+	at oracle.dbtools.crest.swingui.ControllerApplication.saveAsDesign(ControllerApplication.java:3763)
+	at oracle.dbtools.crest.swingui.ControllerApplication$SaveAll$1.run(ControllerApplication.java:2967)
+2025-06-04 23:32:48 SEVERE - Error select design file 
+oracle.dbtools.raptor.ui.URLFileChooser$URLFileChooserException: approveSelection failed for file:/C:/Users/Carlos Eduardo/OneDrive/Área de Trabalho/Exercício2_Banco_Dados_Logico/
+	at oracle.dbtools.raptor.ui.URLFileChooser.adjustSelectedURL(URLFileChooser.java:725)
+	at oracle.dbtools.raptor.ui.URLFileChooser.showSaveDialog(URLFileChooser.java:289)
+	at oracle.dbtools.raptor.ui.URLFileChooser.showSaveDialog(URLFileChooser.java:264)
+	at oracle.dbtools.crest.swingui.ApplicationView.selectDesignName(ApplicationView.java:1890)
+	at oracle.dbtools.crest.swingui.ControllerApplication.saveAsDesign(ControllerApplication.java:3763)
+	at oracle.dbtools.crest.swingui.ControllerApplication$SaveAs$1.run(ControllerApplication.java:3739)
+2025-06-04 23:33:53 SEVERE - Error select design file 
+oracle.dbtools.raptor.ui.URLFileChooser$URLFileChooserException: approveSelection failed for file:/C:/Users/Carlos Eduardo/OneDrive/Área de Trabalho/Exercício2_Banco_Dados_Logico/
+	at oracle.dbtools.raptor.ui.URLFileChooser.adjustSelectedURL(URLFileChooser.java:725)
+	at oracle.dbtools.raptor.ui.URLFileChooser.showSaveDialog(URLFileChooser.java:289)
+	at oracle.dbtools.raptor.ui.URLFileChooser.showSaveDialog(URLFileChooser.java:264)
+	at oracle.dbtools.crest.swingui.ApplicationView.selectDesignName(ApplicationView.java:1890)
+	at oracle.dbtools.crest.swingui.ControllerApplication.saveAsDesign(ControllerApplication.java:3763)
+	at oracle.dbtools.crest.swingui.ControllerApplication$SaveAs$1.run(ControllerApplication.java:3739)
+2025-06-04 23:37:21 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-06-04 23:37:23 SEVERE - Unable to load object from XML: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Projeto_Banco_Dados_Logico\mapping\ExtendedMap.xml
+java.io.FileNotFoundException: C:\Users\Carlos Eduardo\OneDrive\Área de Trabalho\Projeto_Banco_Dados_Logico\mapping\ExtendedMap.xml (O sistema não pode encontrar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at oracle.dbtools.crest.model.metadata.XMLToObjectTransformer.transformToObject(XMLToObjectTransformer.java:134)
+	at oracle.dbtools.crest.model.metadata.XMLToObjectTransformer.transformToObject(XMLToObjectTransformer.java:129)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.transformFromXMLToObject(XMLTransformationManager.java:1872)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.transformFromXMLToObject(XMLTransformationManager.java:1820)
+	at oracle.dbtools.crest.model.design.Design.openDesign(Design.java:1672)
+	at oracle.dbtools.crest.swingui.ControllerApplication$1.run(ControllerApplication.java:2512)
+2025-08-23 10:35:10 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-08-24 13:17:48 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-08-24 13:18:47 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-08-24 13:18:53 SEVERE - Unable to load object from XML: C:\Users\caiof\Área de Trabalho\modelo_logico_dsm2\mapping\ExtendedMap.xml
+java.io.FileNotFoundException: C:\Users\caiof\Área de Trabalho\modelo_logico_dsm2\mapping\ExtendedMap.xml (O sistema não pode encontrar o caminho especificado)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(Unknown Source)
+	at java.base/java.io.FileInputStream.<init>(Unknown Source)
+	at oracle.dbtools.crest.model.metadata.XMLToObjectTransformer.transformToObject(XMLToObjectTransformer.java:134)
+	at oracle.dbtools.crest.model.metadata.XMLToObjectTransformer.transformToObject(XMLToObjectTransformer.java:129)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.transformFromXMLToObject(XMLTransformationManager.java:1872)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.transformFromXMLToObject(XMLTransformationManager.java:1820)
+	at oracle.dbtools.crest.model.design.Design.openDesign(Design.java:1672)
+	at oracle.dbtools.crest.swingui.ControllerApplication$1.run(ControllerApplication.java:2512)
+2025-08-24 13:19:45 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-08-24 13:21:11 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-08-24 13:53:57 SEVERE - Não é possível gravar o documento no arquivo: C:\modelo_logico.dmd
+java.io.FileNotFoundException: C:\modelo_logico.dmd (Acesso negado)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(Unknown Source)
+	at java.base/java.io.FileOutputStream.<init>(Unknown Source)
+	at java.base/java.io.FileOutputStream.<init>(Unknown Source)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.saveContentOfObject(XMLTransformationManager.java:4187)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.saveObject(XMLTransformationManager.java:1684)
+	at oracle.dbtools.crest.model.metadata.XMLTransformationManager.saveDesign(XMLTransformationManager.java:643)
+	at oracle.dbtools.crest.model.design.Design.saveAll(Design.java:2424)
+	at oracle.dbtools.crest.swingui.ControllerApplication.saveAll(ControllerApplication.java:4148)
+	at oracle.dbtools.crest.swingui.ControllerApplication.saveAsDesign(ControllerApplication.java:3880)
+	at oracle.dbtools.crest.swingui.ControllerApplication$SaveAs$1.run(ControllerApplication.java:3739)
+2025-08-24 13:54:40 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-08-24 13:56:25 INFO - Oracle SQL Developer Data Modeler 22.2.0.165.1149
+2025-08-24 13:59:09 SEVERE - Error in UpdateDO_Edit.undo 
+Desfazer Atualização ITEM_PEDIDO_PRODUTO_FK
+Index 4 out of bounds for length 4
+2025-08-24 14:17:04 SEVERE - Error in UpdateDO_Edit.undo 
+Desfazer Atualização ITEM_PEDIDO_SERVICO_FK
+Index 4 out of bounds for length 4
+2025-08-24 14:17:05 SEVERE - Error in UpdateDO_Edit.undo 
+Desfazer Atualização ITEM_PEDIDO_SERVICO_FK
+A associação já existe
+2025-08-24 14:17:47 SEVERE - Error in UpdateDO_Edit.undo 
+Desfazer Atualização ITEM_PEDIDO_PRODUTO_FK
+Index 3 out of bounds for length 3
+2025-08-24 14:17:48 SEVERE - Error in UpdateDO_Edit.undo 
+Desfazer Atualização ITEM_PEDIDO_PRODUTO_FK
+A associação já existe
+2025-08-24 14:17:48 SEVERE - Error in UpdateDO_Edit.undo 
+Desfazer Atualização PRODUTO_ITEM_PEDIDO_FK
+Index 1 out of bounds for length 1
+2025-08-24 14:17:49 SEVERE - Error in UpdateDO_Edit.undo 
+Desfazer Atualização PRODUTO_ITEM_PEDIDO_FK
+Index 1 out of bounds for length 1

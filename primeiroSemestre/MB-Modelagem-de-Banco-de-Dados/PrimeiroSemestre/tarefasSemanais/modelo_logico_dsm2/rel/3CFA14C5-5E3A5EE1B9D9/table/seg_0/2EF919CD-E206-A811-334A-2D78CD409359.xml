@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2EF919CD-E206-A811-334A-2D78CD409359" name="ITEM_PEDIDO">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PEDIDO_id_pedido" id="374C96E5-AD15-ADB5-06C0-79B65E9966D5">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="198620FB-F2B8-5F14-C517-69E674E8E1F7" referredColumn="E9C951B5-3EAD-9025-EEEF-3DE2F0FFAA8F"/>
+</associations>
+</Column>
+<Column name="CURSO_id_curso" id="CD0BBA04-9B69-F203-B7AD-3B83CAEA20EE">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="68FC499D-AC57-3BDF-4B1C-73AF936229FC" referredColumn="ECC15BF6-798E-D34C-A821-F3EBAC91155D"/>
+</associations>
+</Column>
+<Column name="PRODUTO_id_produto" id="E9917917-688C-542F-FDCD-CB7BE45DEF28">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:16:08 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SERVICO_id_servico" id="C572BF1B-1F6C-9D8F-BC1D-5A75EC258809">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:16:14 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E8A47B93-45C8-D2F2-E3D9-56EEA598A56A" name="ITEM_PEDIDO_PK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="374C96E5-AD15-ADB5-06C0-79B65E9966D5"/>
+<colUsage columnID="CD0BBA04-9B69-F203-B7AD-3B83CAEA20EE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B3994524-28A1-FA6A-2FA4-AB478573B6A0" name="ITEM_PEDIDO_PEDIDO_FK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>9C752511-62E9-0301-5F3C-A3AC3771051E</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="374C96E5-AD15-ADB5-06C0-79B65E9966D5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="161363F9-64F0-D3B4-32C0-AF55F6579A68" name="ITEM_PEDIDO_CURSO_FK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>9C752511-62E9-0301-5F3C-A3AC3771051E</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CD0BBA04-9B69-F203-B7AD-3B83CAEA20EE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

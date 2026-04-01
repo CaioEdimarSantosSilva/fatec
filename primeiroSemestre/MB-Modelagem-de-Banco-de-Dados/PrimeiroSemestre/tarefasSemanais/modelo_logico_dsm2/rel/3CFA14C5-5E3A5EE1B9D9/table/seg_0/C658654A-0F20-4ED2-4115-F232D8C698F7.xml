@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C658654A-0F20-4ED2-4115-F232D8C698F7" name="PAGAMENTO">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>5BBEE51C-2C09-CDEC-DF02-418DF743D81A</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_forma_pagamento" id="100880F0-74B9-1831-2A81-F13CD0714B44">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>50B5EE0B-EA02-D21B-2945-8C55E310387B</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_detalhe_pagamento" id="757B4474-D8C4-B376-8224-E1BFD44F2974">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>4CB42081-C75C-4E38-113F-C6C859C237BC</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_ativo_pagamento" id="0069E9DE-28DA-7E34-528D-19249F7B6384">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>36A541CC-293E-EABC-CE34-3A75FA865F60</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_bandeira" id="ABEAB06D-AE28-DF29-1BF7-2A2E5EAF46A9">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>415BB6D6-4D9B-9FA8-921E-0EF6112B843B</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMPRESA_id_empresa" id="84DA189C-2F87-4634-6A70-06F9712D6EC3">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>82986CBC-47F0-9F5B-6E81-856EF2DC202B</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="ECF26FC5-28DF-6AAE-08FF-F68084E05C14" referredColumn="3CE77AC7-ABA2-53EE-0BAC-A222C0050497"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="99E3243E-A307-3937-743F-EDD2CDA94900" name="PAGAMENTO_PK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>A1021DF3-81A2-A463-B8A0-68FC8D2EA18B</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="100880F0-74B9-1831-2A81-F13CD0714B44"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6EF90A64-F8B1-5D84-32D2-C935D93D77C1" name="PAGAMENTO_EMPRESA_FK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>CCB3A22A-E531-CD64-80F2-A8DE3CA74A6D</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="84DA189C-2F87-4634-6A70-06F9712D6EC3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

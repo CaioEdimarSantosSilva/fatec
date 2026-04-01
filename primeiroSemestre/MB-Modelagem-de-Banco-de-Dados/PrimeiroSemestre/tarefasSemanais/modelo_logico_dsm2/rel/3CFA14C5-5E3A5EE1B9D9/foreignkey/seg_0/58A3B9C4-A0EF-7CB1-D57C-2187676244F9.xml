@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="58A3B9C4-A0EF-7CB1-D57C-2187676244F9" containerWithKeyObject="12D4922F-9727-A164-8F5D-DF0462F133B5" localFKIndex="E6161D78-B7C6-8B84-06DB-73C0C14B49AF" name="Relation_10_SERVICO_FK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>EE518624-1FA3-EDD4-89EE-2BF0BDF31E06</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<referredTableLongName>SERVICO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>8307967A-FE4A-4698-20E8-E39E2AA7176A</referredTableID>
+<keyObject>6ECE1A89-FFC0-3C09-4930-2496515CD6A4</keyObject>
+<referredKeyID>6ECE1A89-FFC0-3C09-4930-2496515CD6A4</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_servico</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

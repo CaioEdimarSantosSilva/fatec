@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="5BBEE51C-2C09-CDEC-DF02-418DF743D81A" name="PAGAMENTO">
+<createdBy>João Pedro</createdBy>
+<createdTime>2025-08-21 20:58:08 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_forma_pagamento" id="50B5EE0B-EA02-D21B-2945-8C55E310387B">
+<createdBy>João Pedro</createdBy>
+<createdTime>2025-08-21 20:58:25 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ds_detalhe_pagamento" id="4CB42081-C75C-4E38-113F-C6C859C237BC">
+<createdBy>João Pedro</createdBy>
+<createdTime>2025-08-21 20:59:27 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_ativo_pagamento" id="36A541CC-293E-EABC-CE34-3A75FA865F60">
+<createdBy>João Pedro</createdBy>
+<createdTime>2025-08-21 21:00:15 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nm_bandeira" id="415BB6D6-4D9B-9FA8-921E-0EF6112B843B">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:34:18 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_empresa" id="82986CBC-47F0-9F5B-6E81-856EF2DC202B">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:44:07 UTC</createdTime>
+<generatorID>CCB3A22A-E531-CD64-80F2-A8DE3CA74A6D</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<referedAttribute>58A91D28-1331-0A7C-15FD-9DB9F95B8255</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A1021DF3-81A2-A463-B8A0-68FC8D2EA18B" name="FORMA_PAGAMENTO PK">
+<createdBy>João Pedro</createdBy>
+<createdTime>2025-08-21 20:58:43 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>50B5EE0B-EA02-D21B-2945-8C55E310387B</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

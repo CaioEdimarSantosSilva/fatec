@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="ITEM_PEDIDOv2" directorySegmentName="seg_0" id="EE518624-1FA3-EDD4-89EE-2BF0BDF31E06">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:06:45 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>E3912A21-6CF0-2DB7-A841-6D4834262D86</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D8F2AEB7-A5BB-9193-97E2-CECE65A65FAB</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

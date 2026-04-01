@@ -1,0 +1,132 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DDF9DBB9-AD2B-8FDB-F974-202CEB1DA996" name="EMPRESA">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>1C42A700-C889-DBC8-A445-0A053B6B130D</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_empresa" id="3CE77AC7-ABA2-53EE-0BAC-A222C0050497">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>58A91D28-1331-0A7C-15FD-9DB9F95B8255</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_email_empresa" id="26DE7AC9-FD38-D770-B84D-1A33EF4D8559">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>3F1C4D0B-AECD-7EFE-3D74-9CE141362E4A</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_email_secundario_empresa" id="6274710C-EFAB-A3E6-6E60-927A1F9DC301">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>5694603A-14DE-6DB0-FC5E-D95D3104848B</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_telefone_empresa" id="266B312F-511A-51A9-189D-1BA3AB3550DD">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>209B6848-3D82-A899-33CE-46E2A3359B95</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_telefone_secundario_empresa" id="60970655-EDA1-7868-A617-2AF22EFA2011">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>3FEA8A85-C4E6-45BA-E073-A726820FA4B9</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_endereco_empresa" id="57C017E4-8D5D-5019-1876-7BDC8531865C">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>4B28F2B2-EE48-82AB-260E-1E251B548734</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ds_sobre_empresa" id="6ACEC031-EFD7-F91C-6880-D43858611624">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>9B65ACB5-DE8B-A886-AC09-F7B476EB98FD</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nr_cnpj" id="A676315C-7EE7-D252-B238-042572E2B459">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>43DB853A-380D-229C-2C93-E1679B9EA180</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>14</dataTypePrecision>
+<ownDataTypeParameters>,14,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nm_empresa" id="60C9DE99-99DC-CF08-859F-CDD9CB1D4C43">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>68C511C3-1728-E8AF-91F2-7ED2C8700C0B</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C5C10BDC-6885-0D76-602C-C5405DAA0C9E" name="EMPRESA_PK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:45:36 UTC</createdTime>
+<generatorID>282CC315-5C6B-3E7C-96B7-BB48A18CA05F</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3CE77AC7-ABA2-53EE-0BAC-A222C0050497"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

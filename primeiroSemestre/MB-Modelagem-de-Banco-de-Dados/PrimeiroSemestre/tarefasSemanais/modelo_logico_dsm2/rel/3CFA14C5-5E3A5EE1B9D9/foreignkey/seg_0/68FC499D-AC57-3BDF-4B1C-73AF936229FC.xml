@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="68FC499D-AC57-3BDF-4B1C-73AF936229FC" containerWithKeyObject="2EF919CD-E206-A811-334A-2D78CD409359" localFKIndex="161363F9-64F0-D3B4-32C0-AF55F6579A68" name="ITEM_PEDIDO_CURSO_FK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>9C752511-62E9-0301-5F3C-A3AC3771051E</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<referredTableLongName>CURSO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>A58A92C2-361E-B0CB-7DD4-25979027365B</referredTableID>
+<keyObject>2CA59351-8B90-1F3D-68A8-F530AD6CB0EB</keyObject>
+<referredKeyID>2CA59351-8B90-1F3D-68A8-F530AD6CB0EB</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_curso</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

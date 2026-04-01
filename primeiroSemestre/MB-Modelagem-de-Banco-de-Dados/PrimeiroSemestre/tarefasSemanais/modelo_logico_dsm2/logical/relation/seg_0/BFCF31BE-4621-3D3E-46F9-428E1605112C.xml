@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Receba" directorySegmentName="seg_0" id="BFCF31BE-4621-3D3E-46F9-428E1605112C">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:43:16 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<sourcePk>282CC315-5C6B-3E7C-96B7-BB48A18CA05F</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1C42A700-C889-DBC8-A445-0A053B6B130D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>4D3E877F-844B-3C52-F692-1103E8E2B389</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

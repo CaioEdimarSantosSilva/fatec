@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="12D4922F-9727-A164-8F5D-DF0462F133B5" name="ITEM_PEDIDOv2">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PEDIDO_id_pedido" id="63BB5392-0628-3A5B-FED5-9D354D02E959">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="55C407C6-03D4-A3B8-E810-07BEF7441583" referredColumn="E9C951B5-3EAD-9025-EEEF-3DE2F0FFAA8F"/>
+</associations>
+</Column>
+<Column name="SERVICO_id_servico" id="2AABC060-89E8-CF17-D04A-61E0AD6C4819">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="58A3B9C4-A0EF-7CB1-D57C-2187676244F9" referredColumn="8413AD63-3C52-4C04-B387-D9ECD4435A43"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="69C3F16B-5058-6ADC-A8D6-7C8C460966FE" name="Relation_10_PK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="63BB5392-0628-3A5B-FED5-9D354D02E959"/>
+<colUsage columnID="2AABC060-89E8-CF17-D04A-61E0AD6C4819"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="37E7BAC1-0460-1F6E-0865-665977F58810" name="Relation_10_PEDIDO_FK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>EE518624-1FA3-EDD4-89EE-2BF0BDF31E06</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="63BB5392-0628-3A5B-FED5-9D354D02E959"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E6161D78-B7C6-8B84-06DB-73C0C14B49AF" name="Relation_10_SERVICO_FK">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 17:10:41 UTC</createdTime>
+<generatorID>EE518624-1FA3-EDD4-89EE-2BF0BDF31E06</generatorID>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2AABC060-89E8-CF17-D04A-61E0AD6C4819"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

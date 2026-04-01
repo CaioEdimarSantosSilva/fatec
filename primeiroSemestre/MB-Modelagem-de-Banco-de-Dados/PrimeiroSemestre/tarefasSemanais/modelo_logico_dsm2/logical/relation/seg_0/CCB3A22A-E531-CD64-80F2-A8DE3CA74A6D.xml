@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Incluiv2" directorySegmentName="seg_0" id="CCB3A22A-E531-CD64-80F2-A8DE3CA74A6D">
+<createdBy>caiof</createdBy>
+<createdTime>2025-08-24 16:44:07 UTC</createdTime>
+<ownerDesignName>modelo_logico_dsm2</ownerDesignName>
+<engineerTo>
+<item key="3CFA14C5-A710-F1F1-190E-5E3A5EE1B9D9" value="true"/>
+</engineerTo>
+<sourcePk>282CC315-5C6B-3E7C-96B7-BB48A18CA05F</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>1C42A700-C889-DBC8-A445-0A053B6B130D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>5BBEE51C-2C09-CDEC-DF02-418DF743D81A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
