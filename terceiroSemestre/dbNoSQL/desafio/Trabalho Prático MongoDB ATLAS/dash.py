@@ -9,7 +9,7 @@ st.set_page_config(page_title="Dengue Brasil 2015", page_icon="🦟", layout="wi
 st.title("🦟 Dashboard — Dengue no Brasil (2015)")
 st.caption("Fonte: SINAN/DATASUS | Base importada no MongoDB Atlas")
 
-MONGO_URI = "mongodb+srv://caio_silva:RV9wZEce7HZaQkKO@clusterdsm.wnqzyqd.mongodb.net/?appName=ClusterDSM"
+MONGO_URI = "mongodb+srv://user:password@clusterdsm.wnqzyqd.mongodb.net/?appName=ClusterDSM"
 
 @st.cache_resource
 def get_collection():
