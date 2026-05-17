@@ -59,8 +59,12 @@ select {
     @apply text-xl font-extrabold leading-tight text-ink;
   }
 
+  .book-card-author {
+    @apply mt-2 text-sm font-bold text-moss;
+  }
+
   .book-card-category {
-    @apply mt-2 text-sm font-medium text-ink/55;
+    @apply mt-1 text-sm font-medium text-ink/55;
   }
 
   .book-card-meta {

@@ -644,6 +644,7 @@ function HomePage({
   onWaiting,
 }) {
   const authors = Object.keys(groupedBooks);
+  const allBooks = authors.flatMap((author) => groupedBooks[author]);
 
   if (loading) {
     return <SectionMessage icon={<RefreshCw />} title="Carregando livros..." />;
@@ -654,35 +655,31 @@ function HomePage({
   }
 
   return (
-    <div className="space-y-10">
-      {authors.map((author) => (
-        <section key={author}>
-          <div className="mb-4 flex items-end justify-between gap-4">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-moss">Autor</p>
-              <h2 className="text-2xl font-bold">{author}</h2>
-            </div>
-            <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-ink/60 shadow-sm">
-              {groupedBooks[author].length} livro(s)
-            </span>
-          </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {groupedBooks[author].map((book) => (
-              <BookCard
-                key={book.id}
-                book={book}
-                canUseActions={canUseActions}
-                isFavorite={favoriteIds.has(Number(book.id))}
-                isWaiting={waitingIds.has(Number(book.id))}
-                onBorrow={onBorrow}
-                onFavorite={onFavorite}
-                onWaiting={onWaiting}
-              />
-            ))}
-          </div>
-        </section>
-      ))}
-    </div>
+    <section>
+      <div className="mb-4 flex items-end justify-between gap-4">
+        <div>
+          <p className="text-xs font-bold uppercase tracking-[0.16em] text-moss">Acervo</p>
+          <h2 className="text-2xl font-bold">Livros disponiveis</h2>
+        </div>
+        <span className="rounded-full bg-white px-3 py-1 text-xs font-bold text-ink/60 shadow-sm">
+          {allBooks.length} livro(s)
+        </span>
+      </div>
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {allBooks.map((book) => (
+          <BookCard
+            key={book.id}
+            book={book}
+            canUseActions={canUseActions}
+            isFavorite={favoriteIds.has(Number(book.id))}
+            isWaiting={waitingIds.has(Number(book.id))}
+            onBorrow={onBorrow}
+            onFavorite={onFavorite}
+            onWaiting={onWaiting}
+          />
+        ))}
+      </div>
+    </section>
   );
 }
 
@@ -724,6 +721,7 @@ function BookCard({
       <div className="book-card-body">
         <div>
           <h3 className="book-card-title">{book.titulo}</h3>
+          <p className="book-card-author">{book.autor}</p>
           <p className="book-card-category">{book.categoria}</p>
         </div>
 
