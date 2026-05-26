@@ -1,0 +1,19 @@
+{% extends 'template.html' %}
+
+{% block titulo %}Cadastro{% endblock %}
+
+{% block conteudo %}
+
+<div class="form-card form-card--centered">
+    <h1>Criar conta</h1>
+
+    <form action="{% url 'cadastro' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <p class="form-footnote">Já tem conta? <a href="{% url 'login' %}">Entrar</a></p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'template.html' %}
+
+{% block titulo %}Perfil{% endblock %}
+
+{% block conteudo %}
+
+<section class="dash-header">
+    <div>
+        <span class="section-label">Minha conta</span>
+        <h1>Perfil</h1>
+    </div>
+</section>
+
+<section class="profile-summary">
+    <h2>{{ user.username }}</h2>
+    <p>{{ user.email|default:"E-mail não informado" }}</p>
+    <a href="{% url 'alterasenha' %}" class="btn-primary">Alterar senha</a>
+</section>
+
+<section class="home-section">
+    <div class="section-content">
+        <span class="section-label">Histórico</span>
+        <h2>Minhas compras</h2>
+    </div>
+
+    {% if compras %}
+        <table class="responsive-table">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Valor</th>
+                    <th>Data</th>
+                    <th>Avaliação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for compra in compras %}
+                    <tr>
+                        <td data-label="Produto">{{ compra.produto.nome }}</td>
+                        <td data-label="Quantidade">{{ compra.quantidade }}</td>
+                        <td data-label="Valor">R$ {{ compra.valor_total }}</td>
+                        <td data-label="Data">{{ compra.data_compra|date:"d/m/Y H:i" }}</td>
+                        <td data-label="Avaliação"><a href="{% url 'avaliacao' %}?compra_id={{ compra.id }}">Avaliar</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <div class="empty-state">
+            <h2>Nenhuma compra encontrada</h2>
+            <p>Quando você comprar um produto, ele aparecerá aqui.</p>
+        </div>
+    {% endif %}
+</section>
+
+{% endblock %}

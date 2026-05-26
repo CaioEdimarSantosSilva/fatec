@@ -1,0 +1,61 @@
+{% extends 'template.html' %}
+
+{% block titulo %}Avaliações{% endblock %}
+
+{% block conteudo %}
+
+<div class="dash-header">
+    <div>
+        <span class="section-label">Dashboard -> Avaliações</span>
+        <h1>Avaliações recebidas</h1>
+    </div>
+    <a href="{% url 'dashboard' %}" class="btn-ghost-sm">Voltar</a>
+</div>
+
+<form method="get" class="admin-filters admin-filters--single">
+    <div class="filter-field">
+        <label for="q">Pesquisar</label>
+        <input type="search" id="q" name="q" value="{{ busca }}" placeholder="Cliente, produto ou comentário">
+    </div>
+    <div class="filter-actions">
+        <button type="submit">Filtrar</button>
+        <a href="{% url 'avaliacoesadmin' %}" class="btn-ghost-sm">Limpar</a>
+    </div>
+</form>
+
+<p class="result-count">{{ avaliacoes.paginator.count }} avaliações encontradas</p>
+
+<div class="table-wrap">
+    <table class="responsive-table">
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Produto</th>
+                <th>Nota</th>
+                <th>Comentário</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in avaliacoes %}
+            <tr>
+                <td data-label="Cliente" class="td-strong">{{ item.cliente }}</td>
+                <td data-label="Produto">{{ item.produto|default:"-" }}</td>
+                <td data-label="Nota">{{ item.nota }}/5</td>
+                <td data-label="Comentário" class="td-description">{{ item.comentario|truncatechars:140 }}</td>
+                <td data-label="Ações">
+                    <a href="#" onclick="openDeleteModal('{% url 'delavaliacaoadmin' item.id %}', '{{ item.cliente }}'); return false;" class="btn-ghost-sm">Excluir</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5" class="table-empty">Nenhuma avaliação encontrada.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% include 'partials/paginacao.html' with page_obj=avaliacoes querystring=querystring %}
+
+{% endblock %}

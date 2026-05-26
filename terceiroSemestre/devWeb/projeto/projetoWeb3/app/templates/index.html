@@ -1,0 +1,146 @@
+{% extends 'template.html' %}
+
+{% block titulo %}Início{% endblock %}
+
+{% block conteudo %}
+
+<section class="hero">
+    <div class="hero-badge">Livros, HQs e Mangás</div>
+    <h1 class="hero-title">Sua próxima leitura começa aqui</h1>
+    <p class="hero-subtitle">
+        Encontre livros, histórias em quadrinhos e mangás em uma loja simples, rápida e feita para leitores.
+    </p>
+    <div class="hero-actions">
+        <a href="{% url 'loja' %}" class="btn-primary">Ver produtos</a>
+        {% if not user.is_authenticated %}
+            <a href="{% url 'cadastro' %}" class="btn-ghost">Criar conta</a>
+        {% endif %}
+    </div>
+</section>
+
+<section class="home-section">
+    <div class="section-content">
+        <span class="section-label">Nossa proposta</span>
+        <h2>Um catálogo pensado para fãs de boas histórias</h2>
+        <p>
+            A Vitrine Geek reúne produtos cadastrados pela administração da loja e sugestões carregadas pela Google Books.
+            Assim, o visitante pode conhecer novas obras enquanto compra os itens disponíveis em estoque.
+        </p>
+        <p>
+            O sistema controla compras, reduz estoque automaticamente e salva o histórico do cliente no perfil.
+        </p>
+    </div>
+</section>
+
+{% if not user.is_authenticated %}
+<section class="signup-cta" aria-labelledby="signup-cta-title">
+    <div class="signup-cta-content">
+        <span class="section-label">Conta gratuita</span>
+        <h2 id="signup-cta-title">Cadastre-se para comprar e acompanhar seus pedidos</h2>
+        <p>
+            Com uma conta na Vitrine Geek, você finaliza compras, acompanha seu histórico no perfil
+            e pode avaliar sua experiência depois.
+        </p>
+    </div>
+    <a href="{% url 'cadastro' %}" class="btn-primary">Criar minha conta</a>
+</section>
+{% endif %}
+
+<section class="home-section home-section--alt">
+    <div class="section-content">
+        <span class="section-label">Mais vendidos</span>
+        <h2>Destaques por categoria</h2>
+    </div>
+
+    {% for categoria, produtos in produtos_mais_vendidos.items %}
+        <div class="home-category-row">
+            <div class="home-category-head">
+                <h3>{{ categoria }}</h3>
+                <a href="{% url 'loja' %}?ordem=mais_vendidos" class="btn-ghost-sm">Ver loja</a>
+            </div>
+            <div class="loja-grid">
+                {% for prod in produtos %}
+                    <article class="product-card">
+                        <div class="product-img-wrap">
+                            {% if prod.imagem %}
+                                <img src="{{ prod.imagem.url }}" alt="{{ prod.nome }}">
+                            {% else %}
+                                <div class="product-img-placeholder">Sem imagem</div>
+                            {% endif %}
+                            <span class="product-badge">{{ prod.categoria|default:"Produto" }}</span>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">{{ prod.nome }}</h3>
+                            <div class="product-meta">
+                                {% if prod.autor %}{{ prod.autor }}<br>{% endif %}
+                                Vendidos: {{ prod.vendas|default:0 }}
+                            </div>
+                            <div class="product-footer">
+                                <div class="product-price-row">
+                                    <span class="product-price">R$ {{ prod.preco }}</span>
+                                </div>
+                                <div class="product-actions" aria-label="Ações do produto {{ prod.nome }}">
+                                    <a href="{% url 'detalheproduto' prod.id %}" class="btn-ghost-sm">Detalhes</a>
+
+                                    {% if user.is_authenticated and user.is_staff %}
+                                        <button type="button" class="btn-comprar" disabled>Comprar</button>
+                                    {% elif prod.quantidade > 0 %}
+                                        <form action="{% url 'comprarproduto' prod.id %}" method="post" class="buy-form">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn-comprar" aria-label="Comprar {{ prod.nome }}">Comprar</button>
+                                        </form>
+                                    {% else %}
+                                        <button type="button" class="btn-comprar" disabled>Esgotado</button>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+</section>
+
+<section class="home-section">
+    <div class="section-content">
+        <span class="section-label">Como funciona</span>
+        <h2>Compre, acompanhe e avalie</h2>
+        <p>
+            Usuários autenticados podem comprar produtos disponíveis. Após a compra, o cliente é direcionado ao perfil,
+            onde acompanha o histórico e pode avaliar sua experiência.
+        </p>
+        <a href="{% url 'loja' %}" class="btn-primary section-action">Explorar loja</a>
+    </div>
+</section>
+
+<section class="home-section">
+    <div class="section-content">
+        <span class="section-label">Avaliações</span>
+        <h2>O que os clientes estão dizendo</h2>
+    </div>
+
+    {% if avaliacoes %}
+        <div class="reviews-grid">
+            {% for item in avaliacoes %}
+                <article class="review-card">
+                    <div class="review-top">
+                        <strong>{{ item.cliente }}</strong>
+                        <span>{{ item.nota }}/5</span>
+                    </div>
+                    {% if item.produto %}
+                        <small>{{ item.produto }}</small>
+                    {% endif %}
+                    <p>{{ item.comentario }}</p>
+                </article>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="empty-state">
+            <h2>Nenhuma avaliação ainda</h2>
+            <p>As avaliações dos clientes aparecerão aqui após as compras.</p>
+        </div>
+    {% endif %}
+</section>
+
+{% endblock %}

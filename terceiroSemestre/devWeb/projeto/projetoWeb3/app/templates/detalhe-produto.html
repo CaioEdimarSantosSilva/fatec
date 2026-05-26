@@ -1,0 +1,78 @@
+﻿{% extends 'template.html' %}
+
+{% block titulo %}{{ produto.nome }}{% endblock %}
+
+{% block conteudo %}
+
+
+<section class="product-detail">
+    <div class="product-detail-media">
+        {% if produto.imagem %}
+            <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}">
+        {% else %}
+            <div class="product-img-placeholder">Sem imagem</div>
+        {% endif %}
+    </div>
+
+    <div class="product-detail-info">
+        <div class="product-detail-title">
+            <span class="section-label">{{ produto.categoria|default:"Produto" }}</span>
+            <h1>{{ produto.nome }}</h1>
+        </div>
+
+        <div class="product-detail-meta">
+            {% if produto.autor %}<span>Autor: {{ produto.autor }}</span>{% endif %}
+            {% if produto.ano %}<span>Ano: {{ produto.ano }}</span>{% endif %}
+            <span>Estoque: {{ produto.quantidade }}</span>
+            <span>Vendidos: {{ produto.vendas|default:0 }}</span>
+        </div>
+
+        {% if produto.descricao %}
+            <p class="product-description">{{ produto.descricao }}</p>
+        {% endif %}
+
+        <div class="product-detail-buy">
+            <div>
+                <span class="section-label">Pre?o</span>
+                <strong>R$ {{ produto.preco }}</strong>
+            </div>
+
+            {% if user.is_authenticated and user.is_staff %}
+                <p class="purchase-note">Conta administrativa n?o realiza compras. Entre com uma conta de cliente para comprar.</p>
+            {% elif produto.quantidade > 0 %}
+                <form action="{% url 'comprarproduto' produto.id %}" method="post" class="buy-form">
+                    {% csrf_token %}
+                    <button type="submit" class="btn-comprar">Comprar</button>
+                </form>
+            {% else %}
+                <button class="btn-comprar" disabled>Esgotado</button>
+            {% endif %}
+        </div>
+
+        <a href="{{ voltar_url }}" class="btn-ghost-sm">Voltar</a>
+    </div>
+</section>
+
+{% if avaliacoes %}
+<section class="product-reviews" aria-labelledby="product-reviews-title">
+    <div class="product-reviews-head">
+        <span class="section-label">Avalia??es</span>
+        <h2 id="product-reviews-title">O que os clientes acharam</h2>
+    </div>
+
+    <div class="product-reviews-grid">
+        {% for item in avaliacoes %}
+            <article class="product-review-card">
+                <div class="product-review-top">
+                    <strong>{{ item.cliente }}</strong>
+                    <span>{{ item.nota }}/5</span>
+                </div>
+                <p>{{ item.comentario }}</p>
+            </article>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+{% endblock %}
+

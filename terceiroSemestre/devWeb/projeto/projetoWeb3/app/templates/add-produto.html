@@ -1,0 +1,23 @@
+{% extends 'template.html' %}
+
+{% block titulo %}Novo produto{% endblock %}
+
+{% block conteudo %}
+
+<div class="dash-header">
+    <div>
+        <span class="section-label">Produtos -> Novo</span>
+        <h1>Adicionar produto</h1>
+    </div>
+    <a href="{% url 'produto' %}" class="btn-ghost-sm">Voltar</a>
+</div>
+
+<div class="form-card">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Adicionar produto</button>
+    </form>
+</div>
+
+{% endblock %}

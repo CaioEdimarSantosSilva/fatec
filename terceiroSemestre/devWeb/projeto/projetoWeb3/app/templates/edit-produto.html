@@ -1,0 +1,29 @@
+{% extends 'template.html' %}
+
+{% block titulo %}Editar produto{% endblock %}
+
+{% block conteudo %}
+
+<div class="dash-header">
+    <div>
+        <span class="section-label">Produtos -> Editar</span>
+        <h1>Editar produto</h1>
+    </div>
+    <a href="{% url 'produto' %}" class="btn-ghost-sm">Voltar</a>
+</div>
+
+<div class="form-card">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if produto.imagem %}
+            <p class="current-media">
+                Imagem atual:
+                <img src="{{ produto.imagem.url }}" alt="{{ produto.nome }}">
+            </p>
+        {% endif %}
+        <button type="submit">Salvar alterações</button>
+    </form>
+</div>
+
+{% endblock %}

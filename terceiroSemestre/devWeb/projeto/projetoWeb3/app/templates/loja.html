@@ -1,0 +1,150 @@
+{% extends 'template.html' %}
+
+{% block titulo %}Produtos{% endblock %}
+
+{% block conteudo %}
+
+<section class="loja-header">
+    <span class="section-label">Catálogo</span>
+    <h1>Produtos disponíveis</h1>
+    <p class="loja-subtitle">Livros, HQs e mangás cadastrados pela administração da loja.</p>
+</section>
+
+<form method="get" class="admin-filters">
+    <div class="filter-field">
+        <label for="q">Pesquisar</label>
+        <input type="search" id="q" name="q" value="{{ busca }}" placeholder="Título, autor ou descrição">
+    </div>
+
+    <div class="filter-field">
+        <label for="categoria">Categoria</label>
+        <select id="categoria" name="categoria">
+            <option value="">Todas</option>
+            {% for categoria in categorias %}
+                <option value="{{ categoria.id }}" {% if categoria_selecionada == categoria.id|stringformat:"s" %}selected{% endif %}>
+                    {{ categoria.nome }}
+                </option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="filter-field">
+        <label for="ordem">Ordenar</label>
+        <select id="ordem" name="ordem">
+            <option value="">Mais recentes no cadastro</option>
+            <option value="alfabetica" {% if ordem_selecionada == "alfabetica" %}selected{% endif %}>Ordem alfabética</option>
+            <option value="ano_antigo" {% if ordem_selecionada == "ano_antigo" %}selected{% endif %}>Ano: mais antigo</option>
+            <option value="ano_novo" {% if ordem_selecionada == "ano_novo" %}selected{% endif %}>Ano: mais novo</option>
+            <option value="mais_vendidos" {% if ordem_selecionada == "mais_vendidos" %}selected{% endif %}>Mais vendidos</option>
+        </select>
+    </div>
+
+    <div class="filter-actions">
+        <button type="submit">Filtrar</button>
+        <a href="{% url 'loja' %}" class="btn-ghost-sm">Limpar</a>
+    </div>
+</form>
+
+{% if produtos.paginator.count %}
+<p class="result-count">{{ produtos.paginator.count }} produtos encontrados</p>
+
+<div class="loja-grid">
+    {% for prod in produtos %}
+        <article class="product-card">
+            <div class="product-img-wrap">
+                {% if prod.imagem %}
+                    <img src="{{ prod.imagem.url }}" alt="{{ prod.nome }}">
+                {% else %}
+                    <div class="product-img-placeholder">Sem imagem</div>
+                {% endif %}
+                <span class="product-badge">{{ prod.categoria|default:"Produto" }}</span>
+            </div>
+            <div class="product-info">
+                <h3 class="product-name">{{ prod.nome }}</h3>
+                <div class="product-meta">
+                    {% if prod.autor %}Autor: {{ prod.autor }}<br>{% endif %}
+                    {% if prod.ano %}Ano: {{ prod.ano }}<br>{% endif %}
+                    Estoque: {{ prod.quantidade }}
+                </div>
+                <div class="product-footer">
+                    <div class="product-price-row">
+                        <span class="product-price">R$ {{ prod.preco }}</span>
+                    </div>
+                    <div class="product-actions" aria-label="Ações do produto {{ prod.nome }}">
+                        <a href="{% url 'detalheproduto' prod.id %}" class="btn-ghost-sm">Detalhes</a>
+
+                        {% if user.is_authenticated and user.is_staff %}
+                            <button type="button" class="btn-comprar" disabled>Comprar</button>
+                        {% elif prod.quantidade > 0 %}
+                            <form action="{% url 'comprarproduto' prod.id %}" method="post" class="buy-form">
+                                {% csrf_token %}
+                                <button type="submit" class="btn-comprar" aria-label="Comprar {{ prod.nome }}">Comprar</button>
+                            </form>
+                        {% else %}
+                            <button type="button" class="btn-comprar" disabled>Esgotado</button>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </article>
+    {% endfor %}
+</div>
+
+{% include 'partials/paginacao.html' with page_obj=produtos querystring=querystring %}
+
+{% else %}
+<div class="empty-state">
+    <h2>Nenhum produto cadastrado</h2>
+    <p>Em breve novos livros, HQs e mangás estarão disponíveis.</p>
+</div>
+{% endif %}
+
+{% if produtos_api %}
+<section class="home-section">
+    <div class="section-content">
+        <span class="section-label">Google Books API</span>
+        <h2>Sugestões da Google Books</h2>
+        <p>Resultados carregados automaticamente da API para complementar a pesquisa dos visitantes.</p>
+    </div>
+
+    <div class="loja-grid">
+        {% for produto in produtos_api %}
+            <article class="product-card">
+                <div class="product-img-wrap">
+                    {% if produto.imagem %}
+                        <img src="{{ produto.imagem }}" alt="{{ produto.titulo }}">
+                    {% else %}
+                        <div class="product-img-placeholder">Google Books</div>
+                    {% endif %}
+                    <span class="product-badge">API</span>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="product-name">{{ produto.titulo }}</h3>
+                    <div class="product-meta">{{ produto.autores }}</div>
+
+                    <div class="product-footer">
+                        <div class="product-price-row">
+                            {% if produto.preco %}
+                                <span class="product-price">R$ {{ produto.preco }}</span>
+                            {% else %}
+                                <span class="product-price">Consulta</span>
+                            {% endif %}
+                        </div>
+
+                        <div class="product-actions product-actions--single">
+                            {% if produto.link %}
+                                <a href="{{ produto.link }}" target="_blank" rel="noopener" class="btn-comprar">
+                                    Detalhes
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+{% endblock %}

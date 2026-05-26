@@ -1,0 +1,376 @@
+{% extends 'template.html' %}
+
+{% block titulo %}Dashboard{% endblock %}
+
+{% block conteudo %}
+
+<div class="dash-header">
+    <div>
+        <span class="section-label">Painel administrativo</span>
+        <h1>Dashboard</h1>
+    </div>
+    <div class="dash-user">
+        <div class="dash-avatar">{{ user.username|slice:":2"|upper }}</div>
+        <div>
+            <p class="dash-username">{{ user.username }}</p>
+            <p class="dash-role">{% if user.is_superuser %}Administrador{% else %}Usuário{% endif %}</p>
+        </div>
+    </div>
+</div>
+
+<div class="dash-stats">
+    <div class="stat-card"><span class="stat-card-icon">PR</span><div><span class="stat-card-num">{{ total_produtos }}</span><span class="stat-card-label">Produtos</span></div></div>
+    <div class="stat-card"><span class="stat-card-icon">CA</span><div><span class="stat-card-num">{{ total_categorias }}</span><span class="stat-card-label">Categorias</span></div></div>
+    <div class="stat-card"><span class="stat-card-icon">CT</span><div><span class="stat-card-num">{{ total_contatos }}</span><span class="stat-card-label">Contatos</span></div></div>
+    <div class="stat-card"><span class="stat-card-icon">US</span><div><span class="stat-card-num">{{ total_usuarios }}</span><span class="stat-card-label">Usuários</span></div></div>
+    <div class="stat-card"><span class="stat-card-icon">R$</span><div><span class="stat-card-num">{{ total_compras }}</span><span class="stat-card-label">Vendas</span></div></div>
+    <div class="stat-card"><span class="stat-card-icon">AV</span><div><span class="stat-card-num">{{ total_avaliacoes }}</span><span class="stat-card-label">Avaliações</span></div></div>
+</div>
+
+<h2 class="dash-section-title">Gerenciar</h2>
+
+<div class="dash-grid">
+    <a href="{% url 'usuarios' %}" class="dash-card">
+        <div class="dash-card-icon">US</div>
+        <div class="dash-card-body"><h3>Usuários</h3><p>Adicionar, editar e excluir usuários cadastrados.</p></div>
+        <span class="dash-card-arrow">&rarr;</span>
+    </a>
+    <a href="{% url 'produto' %}" class="dash-card">
+        <div class="dash-card-icon">PR</div>
+        <div class="dash-card-body"><h3>Produtos</h3><p>Adicionar, editar e remover produtos do catálogo.</p></div>
+        <span class="dash-card-arrow">&rarr;</span>
+    </a>
+    <a href="{% url 'categoria' %}" class="dash-card">
+        <div class="dash-card-icon">CA</div>
+        <div class="dash-card-body"><h3>Categorias</h3><p>Organizar as categorias de livros, HQs e mangás.</p></div>
+        <span class="dash-card-arrow">&rarr;</span>
+    </a>
+    <a href="{% url 'compras' %}" class="dash-card">
+        <div class="dash-card-icon">R$</div>
+        <div class="dash-card-body"><h3>Vendas</h3><p>Visualizar e excluir compras realizadas.</p></div>
+        <span class="dash-card-arrow">&rarr;</span>
+    </a>
+    <a href="{% url 'contato' %}" class="dash-card">
+        <div class="dash-card-icon">CT</div>
+        <div class="dash-card-body"><h3>Contatos</h3><p>Visualizar mensagens enviadas pelos clientes.</p></div>
+        <span class="dash-card-arrow">&rarr;</span>
+    </a>
+    <a href="{% url 'avaliacoesadmin' %}" class="dash-card">
+        <div class="dash-card-icon">AV</div>
+        <div class="dash-card-body"><h3>Avaliações</h3><p>Visualizar e excluir avaliações recebidas.</p></div>
+        <span class="dash-card-arrow">&rarr;</span>
+    </a>
+</div>
+
+<h2 class="dash-section-title dash-section-title--charts">Gráficos</h2>
+
+<div class="chart-summary">
+    <div class="chart-summary-item">
+        <span>Total vendido</span>
+        <strong>R$ {{ total_vendido|floatformat:2 }}</strong>
+    </div>
+    <div class="chart-summary-item chart-summary-item--green">
+        <span>Valor em estoque</span>
+        <strong>R$ {{ valor_em_estoque|floatformat:2 }}</strong>
+    </div>
+</div>
+
+<div class="dash-charts-grid">
+    <section class="chart-card chart-card--large">
+        <div class="chart-card-header">
+            <h3>Vendas por categoria</h3>
+            <span>Pizza</span>
+        </div>
+        <div class="chart-wrap chart-wrap--pie">
+            <canvas id="graficoCategorias"></canvas>
+        </div>
+    </section>
+
+    <section class="chart-card">
+        <div class="chart-card-header">
+            <h3>Vendas por autor</h3>
+            <span>Top 8</span>
+        </div>
+        <div class="chart-wrap">
+            <canvas id="graficoAutores"></canvas>
+        </div>
+    </section>
+
+    <section class="chart-card">
+        <div class="chart-card-header">
+            <h3>Vendido x em estoque</h3>
+            <span>R$</span>
+        </div>
+        <div class="chart-wrap chart-wrap--pie">
+            <canvas id="graficoFinanceiro"></canvas>
+        </div>
+    </section>
+
+    <section class="chart-card">
+        <div class="chart-card-header">
+            <h3>Produtos mais vendidos</h3>
+            <span>Unidades</span>
+        </div>
+        <div class="chart-wrap">
+            <canvas id="graficoProdutos"></canvas>
+        </div>
+    </section>
+
+    <section class="chart-card">
+        <div class="chart-card-header">
+            <h3>Estoque por categoria</h3>
+            <span>Disponível</span>
+        </div>
+        <div class="chart-wrap">
+            <canvas id="graficoEstoque"></canvas>
+        </div>
+    </section>
+
+    <section class="chart-card chart-card--full">
+        <div class="chart-card-header">
+            <h3>Receita por dia</h3>
+            <span>Últimos dias</span>
+        </div>
+        <div class="chart-wrap">
+            <canvas id="graficoDias"></canvas>
+        </div>
+    </section>
+</div>
+
+{{ graficos_dashboard|json_script:"dashboard-chart-data" }}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const chartData = JSON.parse(document.getElementById('dashboard-chart-data').textContent);
+    const chartColors = ['#c8602e', '#2e9e5b', '#476f95', '#b88732', '#8b5f9b', '#3b8a86', '#d83a2e', '#7c766b'];
+    const gridColor = 'rgba(31, 28, 22, 0.08)';
+    const textColor = '#6b6857';
+
+    Chart.defaults.color = textColor;
+    Chart.defaults.borderColor = gridColor;
+    Chart.defaults.font.family = "'Nunito', system-ui, sans-serif";
+
+    function datasetOrEmpty(chartInfo) {
+        if (chartInfo.dados.length) {
+            return chartInfo;
+        }
+
+        return {
+            labels: ['Sem dados'],
+            dados: [1]
+        };
+    }
+
+    function money(value) {
+        return Number(value || 0).toLocaleString('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        });
+    }
+
+    const isMobileChart = window.matchMedia('(max-width: 430px)').matches;
+
+    function shortLabel(value) {
+        const text = String(value || '');
+        return isMobileChart && text.length > 18 ? text.slice(0, 17) + '...' : text;
+    }
+
+    function createPieChart(id, chartInfo, label, colors = chartColors) {
+        const data = datasetOrEmpty(chartInfo);
+
+        new Chart(document.getElementById(id), {
+            type: 'pie',
+            data: {
+                labels: data.labels,
+                datasets: [{
+                    label,
+                    data: data.dados,
+                    backgroundColor: colors,
+                    borderColor: '#fff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12,
+                            padding: isMobileChart ? 10 : 16,
+                            font: {
+                                size: isMobileChart ? 10 : 12
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    function createBarChart(id, chartInfo, label, horizontal = false) {
+        const data = datasetOrEmpty(chartInfo);
+
+        new Chart(document.getElementById(id), {
+            type: 'bar',
+            data: {
+                labels: data.labels,
+                datasets: [{
+                    label,
+                    data: data.dados,
+                    backgroundColor: '#c8602e',
+                    borderRadius: 8,
+                    maxBarThickness: 34
+                }]
+            },
+            options: {
+                indexAxis: horizontal ? 'y' : 'x',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: {
+                            color: gridColor
+                        },
+                        ticks: {
+                            color: textColor,
+                            font: {
+                                size: isMobileChart ? 10 : 12
+                            },
+                            callback: (value) => horizontal ? value : shortLabel(data.labels[value] ?? value)
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: gridColor
+                        },
+                        ticks: {
+                            color: textColor,
+                            font: {
+                                size: isMobileChart ? 10 : 12
+                            },
+                            callback: (value) => horizontal ? shortLabel(data.labels[value] ?? value) : value
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    createPieChart('graficoCategorias', chartData.vendas_categoria, 'Vendas');
+    createBarChart('graficoAutores', chartData.vendas_autor, 'Vendas por autor', true);
+    createPieChart('graficoFinanceiro', chartData.financeiro, 'Valores', ['#2e9e5b', '#b88732']);
+    createBarChart('graficoProdutos', chartData.produtos, 'Unidades vendidas', true);
+    createBarChart('graficoEstoque', chartData.estoque_categoria, 'Itens em estoque');
+
+    const diasData = datasetOrEmpty(chartData.vendas_dia);
+    new Chart(document.getElementById('graficoDias'), {
+        type: 'line',
+        data: {
+            labels: diasData.labels,
+            datasets: [{
+                label: 'Receita',
+                data: diasData.dados,
+                borderColor: '#2e9e5b',
+                backgroundColor: 'rgba(46, 158, 91, 0.14)',
+                fill: true,
+                tension: 0.35
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: (context) => money(context.parsed.y)
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    grid: {
+                        color: gridColor
+                    },
+                    ticks: {
+                        font: {
+                            size: isMobileChart ? 10 : 12
+                        },
+                        callback: (value) => shortLabel(diasData.labels[value] ?? value)
+                    }
+                },
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        color: gridColor
+                    },
+                    ticks: {
+                        font: {
+                            size: isMobileChart ? 10 : 12
+                        },
+                        callback: (value) => money(value)
+                    }
+                }
+            }
+        }
+    });
+
+async function gerarPDF() {
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF('p', 'mm', 'a4');
+
+    pdf.setFontSize(16);
+    pdf.text("Relatório de Vendas", 10, 12);
+
+    const ids = [
+        'graficoDias',
+        'graficoCategorias',
+        'graficoFinanceiro',
+        'graficoAutores',
+        'graficoProdutos',
+        'graficoEstoque'
+    ];
+
+    let y = 22;
+
+    for (const id of ids) {
+        const canvas = document.getElementById(id);
+        if (!canvas) continue;
+
+        const img = canvas.toDataURL('image/png');
+        const imgWidth = 190;
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+        if (y + imgHeight > 285) {
+            pdf.addPage();
+            y = 10;
+        }
+
+        pdf.addImage(img, 'PNG', 10, y, imgWidth, imgHeight);
+        y += imgHeight + 8;
+    }
+
+    pdf.save("relatorio-vendas.pdf");
+}
+    
+</script>
+<br/>
+<button onclick="gerarPDF()">Gerar PDF</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script> <!-- cria pdf-->
+
+
+
+{% endblock %}
+
+

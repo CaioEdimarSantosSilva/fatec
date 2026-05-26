@@ -1,0 +1,42 @@
+{% extends 'template.html' %}
+
+{% block titulo %}Quem Somos{% endblock %}
+
+{% block conteudo %}
+
+<section class="hero">
+    <div class="hero-badge">Quem Somos</div>
+    <h1 class="hero-title">Uma loja criada para leitores</h1>
+    <p class="hero-subtitle">
+        A Vitrine Geek é um projeto acadêmico de loja virtual voltado para livros, HQs e mangás.
+    </p>
+</section>
+
+<section class="home-section">
+    <div class="section-content">
+        <span class="section-label">Sobre o projeto</span>
+        <h2>Catálogo, compras e avaliações em um só lugar</h2>
+        <p>
+            O sistema foi desenvolvido em Django para a disciplina de Desenvolvimento Web III.
+            A proposta é simular uma loja virtual com cadastro de produtos, controle de estoque,
+            histórico de compras e avaliações salvas no Firebase.
+        </p>
+        <p>
+            A loja também utiliza a Google Books API para exibir sugestões relacionadas ao tema.
+        </p>
+    </div>
+</section>
+
+<section class="home-section home-section--alt">
+    <div class="section-content">
+        <span class="section-label">Desenvolvedores</span>
+        <h2>Equipe do projeto</h2>
+        <div class="team-list">
+            <p>Caio Edimar Santos Silva</p>
+            <p>Geovanny Ferreira Elias</p>
+            <p>João Pedro Oliveira</p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

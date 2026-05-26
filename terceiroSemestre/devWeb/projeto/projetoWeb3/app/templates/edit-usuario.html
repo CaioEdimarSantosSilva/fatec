@@ -1,0 +1,26 @@
+{% extends 'template.html' %}
+
+{% block titulo %}Editar Perfil{% endblock %}
+
+{% block conteudo %}
+
+<div class="dash-header">
+    <div>
+        <span class="section-label">Minha conta -> Perfil</span>
+        <h1>Editar Perfil</h1>
+    </div>
+    <div class="inline-actions">
+        <a href="{% url 'alterasenha' %}" class="btn-ghost-sm">Alterar senha</a>
+        <a href="{% url 'index' %}" class="btn-ghost-sm">Voltar</a>
+    </div>
+</div>
+
+<div class="form-card">
+    <form action="{% url 'editarusuario' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Salvar alterações">
+    </form>
+</div>
+
+{% endblock %}

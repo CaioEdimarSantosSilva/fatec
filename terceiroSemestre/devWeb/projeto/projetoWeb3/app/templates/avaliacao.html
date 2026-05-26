@@ -1,0 +1,49 @@
+{% extends 'template.html' %}
+
+{% block titulo %}Avaliação{% endblock %}
+
+{% block conteudo %}
+
+<section class="dash-header">
+    <div>
+        <span class="section-label">Avaliação</span>
+        <h1>{{ compra.produto.nome }}</h1>
+        <p>Compra realizada em {{ compra.data_compra|date:"d/m/Y H:i" }}</p>
+    </div>
+</section>
+
+<form method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="compra_id" value="{{ compra.id }}">
+
+    <label for="comentario">Comentário</label>
+    <textarea id="comentario" name="comentario" placeholder="Conte como foi sua experiência" required></textarea>
+
+    <label for="nota">Nota</label>
+    <input type="number" id="nota" name="nota" min="1" max="5" placeholder="Nota de 1 a 5" required>
+
+    <button type="submit">Salvar avaliação</button>
+</form>
+
+{% if avaliacoes %}
+<section class="home-section">
+    <div class="section-content">
+        <span class="section-label">Avaliações j enviadas</span>
+        <h2>Seus comentários para esta compra</h2>
+    </div>
+
+    <div class="reviews-grid">
+        {% for item in avaliacoes %}
+            <article class="review-card">
+                <div class="review-top">
+                    <strong>{{ item.cliente }}</strong>
+                    <span>{{ item.nota }}/5</span>
+                </div>
+                <p>{{ item.comentario }}</p>
+            </article>
+        {% endfor %}
+    </div>
+</section>
+{% endif %}
+
+{% endblock %}

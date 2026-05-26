@@ -1,0 +1,112 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %}Vitrine Geek{% endblock %} | Vitrine Geek</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="{% static 'favicon.svg' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+<nav class="navbar">
+    <a href="{% url 'index' %}" class="nav-brand">Vitrine<span class="dot">.</span>Geek</a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="nav-menu" id="navMenu">
+        <div class="nav-links">
+            <a href="{% url 'index' %}">Início</a>
+            <a href="{% url 'quemsomos' %}">Quem Somos</a>
+            <a href="{% url 'loja' %}">Produtos</a>
+            <a href="{% url 'addcontato' %}">Contato</a>
+            {% if user.is_authenticated and user.is_staff %}
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+            {% endif %}
+        </div>
+        <div class="nav-actions">
+            {% if user.is_authenticated %}
+                <a href="{% url 'perfil' %}" class="nav-btn-ghost">{{ user.username }}</a>
+                <form action="{% url 'logout' %}" method="post" class="logout-form">
+                    {% csrf_token %}
+                    <button type="submit" class="nav-btn-accent">Sair</button>
+                </form>
+            {% else %}
+                <a href="{% url 'login' %}" class="nav-btn-ghost">Entrar</a>
+                <a href="{% url 'cadastro' %}" class="nav-btn-accent">Cadastrar</a>
+            {% endif %}
+        </div>
+    </div>
+</nav>
+
+<main class="main-content">
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="message message-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% block conteudo %}{% endblock %}
+</main>
+
+<footer class="footer">
+    <div class="footer-brand">Vitrine<span class="dot">.</span>Geek</div>
+    <p class="footer-copy">Projeto acad?mico de Desenvolvimento Web III.</p>
+</footer>
+
+<div class="modal-backdrop" id="deleteModal">
+    <div class="modal">
+        <h3>Confirmar exclus?o</h3>
+        <p id="deleteModalMsg">Tem certeza que deseja excluir este item?</p>
+        <div class="modal-actions">
+            <button class="btn-ghost" onclick="closeDeleteModal()">Cancelar</button>
+            <a href="#" id="deleteModalBtn" class="btn-primary modal-del">Excluir</a>
+        </div>
+    </div>
+</div>
+
+<script>
+function openDeleteModal(url, name) {
+    document.getElementById('deleteModalMsg').textContent =
+        'Excluir "' + name + '"? Esta a??o n?o poder? ser desfeita.';
+    document.getElementById('deleteModalBtn').href = url;
+    document.getElementById('deleteModal').classList.add('open');
+}
+function closeDeleteModal() {
+    document.getElementById('deleteModal').classList.remove('open');
+}
+document.getElementById('deleteModal').addEventListener('click', function(e) {
+    if (e.target === this) closeDeleteModal();
+});
+
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.getElementById('navMenu');
+
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', function() {
+        const isOpen = navMenu.classList.toggle('open');
+        navToggle.classList.toggle('open', isOpen);
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+        navToggle.setAttribute('aria-label', isOpen ? 'Fechar menu' : 'Abrir menu');
+    });
+
+    navMenu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            navMenu.classList.remove('open');
+            navToggle.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+            navToggle.setAttribute('aria-label', 'Abrir menu');
+        });
+    });
+}
+</script>
+</body>
+</html>
+
+
