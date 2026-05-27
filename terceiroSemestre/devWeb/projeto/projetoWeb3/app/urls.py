@@ -36,6 +36,7 @@ urlpatterns = [
     # Dashboard
     path('dashboard', views.dashboard, name="dashboard"),
     path('dashboard/usuarios', views.listarUsuarios, name="usuarios"),
+    path('dashboard/usuarios/add', views.addUsuarioAdmin, name="addusuarioadmin"),
     path('dashboard/usuarios/edit/<int:id_user>', views.editUsuarioAdmin, name="editusuarioadmin"),
     path('dashboard/usuarios/del/<int:id_user>', views.delUsuario, name="delusuario"),
     path('dashboard/compras', views.listarCompras, name="compras"),

@@ -133,9 +133,13 @@
                         </div>
 
                         <div class="product-actions product-actions--single">
-                            {% if produto.link %}
+                            {% if user.is_authenticated and produto.link %}
                                 <a href="{{ produto.link }}" target="_blank" rel="noopener" class="btn-comprar">
-                                    Detalhes
+                                    Comprar
+                                </a>
+                            {% elif not user.is_authenticated %}
+                                <a href="{% url 'login' %}" class="btn-comprar">
+                                    Comprar
                                 </a>
                             {% endif %}
                         </div>
@@ -143,6 +147,12 @@
                 </div>
             </article>
         {% endfor %}
+    </div>
+</section>
+{% elif erro_api %}
+<section class="home-section">
+    <div class="api-alert alert-error">
+        {{ erro_api }}
     </div>
 </section>
 {% endif %}

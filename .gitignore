@@ -26,3 +26,11 @@ secrets/
 
 __pycache__/
 *.pyc
+
+# Python / Django
+venv/
+.venv/
+db.sqlite3
+*.sqlite3
+staticfiles/
+runserver*.log

@@ -1230,6 +1230,12 @@ td {
   color: var(--danger);
 }
 
+.api-alert {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .list-card {
   overflow: hidden;
   border: 1.5px solid var(--border);

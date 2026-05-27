@@ -1,0 +1,23 @@
+{% extends 'template.html' %}
+
+{% block titulo %}Novo usuario{% endblock %}
+
+{% block conteudo %}
+
+<div class="dash-header">
+    <div>
+        <span class="section-label">Dashboard -> Usuarios -> Novo</span>
+        <h1>Adicionar usuario</h1>
+    </div>
+    <a href="{% url 'usuarios' %}" class="btn-ghost-sm">Voltar</a>
+</div>
+
+<div class="form-card">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Adicionar usuario</button>
+    </form>
+</div>
+
+{% endblock %}

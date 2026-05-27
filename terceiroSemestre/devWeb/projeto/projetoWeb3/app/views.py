@@ -89,6 +89,12 @@ def buscarProdutosGoogleBooks():
         'langRestrict': 'pt',
     }
     api_key = os.environ.get('GOOGLE_BOOKS_API_KEY')
+    params.update({
+        'q': 'manga hq graphic novel',
+        'country': 'BR',
+        'projection': 'lite',
+        'orderBy': 'relevance',
+    })
 
     if api_key:
         params['key'] = api_key
@@ -97,39 +103,52 @@ def buscarProdutosGoogleBooks():
         response = requests.get(
             'https://www.googleapis.com/books/v1/volumes',
             params=params,
+            headers={'Accept': 'application/json'},
             timeout=5
         )
         response.raise_for_status()
     except requests.HTTPError:
-        if response.status_code == 429:
+        if response.status_code in (403, 429):
             erro_api = 'A Google Books API atingiu o limite diário de consultas. Configure GOOGLE_BOOKS_API_KEY para usar uma chave própria.'
         else:
             erro_api = 'Não foi possível carregar os dados da Google Books API.'
         resultado = (livros_api, erro_api)
-        cache.set(cache_key, resultado, 5 * 60)
+        cache.set(cache_key, resultado, 60)
         return resultado
     except requests.RequestException:
         erro_api = 'Não foi possível conectar à Google Books API.'
         resultado = (livros_api, erro_api)
-        cache.set(cache_key, resultado, 5 * 60)
+        cache.set(cache_key, resultado, 60)
         return resultado
 
-    for item in response.json().get('items', []):
+    try:
+        dados_api = response.json()
+    except ValueError:
+        erro_api = 'A Google Books API retornou uma resposta invalida.'
+        resultado = (livros_api, erro_api)
+        cache.set(cache_key, resultado, 60)
+        return resultado
+
+    for item in dados_api.get('items', []):
         info = item.get('volumeInfo', {})
         sale = item.get('saleInfo', {})
         preco = sale.get('retailPrice', {}).get('amount')
+        imagem = info.get('imageLinks', {}).get('thumbnail')
+
+        if imagem:
+            imagem = imagem.replace('http://', 'https://', 1)
 
         livros_api.append({
             'id': item.get('id'),
             'titulo': info.get('title', 'Título não informado'),
             'autores': ', '.join(info.get('authors', [])) or 'Autor não informado',
-            'imagem': info.get('imageLinks', {}).get('thumbnail'),
+            'imagem': imagem,
             'link': info.get('infoLink'),
             'preco': preco,
         })
 
     resultado = (livros_api, erro_api)
-    cache.set(cache_key, resultado, 60 * 60)
+    cache.set(cache_key, resultado, 6 * 60 * 60)
     return resultado
 
 def index(request):
@@ -165,6 +184,19 @@ def cadastrarUsuario(request):
             messages.success(request, 'Conta criada com sucesso. Faça login para continuar.')
             return redirect('login')
     return render(request, 'cadastro.html', {'form': formulario})
+
+@login_required
+@staff_member_required
+def addUsuarioAdmin(request):
+    formulario = FormUsuario(request.POST or None)
+    if request.method == 'POST':
+        if formulario.is_valid():
+            usuario = formulario.save()
+            grupo_cliente, _ = Group.objects.get_or_create(name="Cliente")
+            usuario.groups.add(grupo_cliente)
+            messages.success(request, 'Usuario cadastrado com sucesso.')
+            return redirect('usuarios')
+    return render(request, 'add-usuario.html', {'form': formulario})
 
 def loginUsuario(request):
     if request.method == 'POST':

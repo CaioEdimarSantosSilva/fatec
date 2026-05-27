@@ -48,6 +48,7 @@ os.environ["DJANGO_SECRET_KEY"] = "crie-uma-chave-secreta-grande-aqui"
 os.environ["DJANGO_ALLOWED_HOSTS"] = "seuusuario.pythonanywhere.com"
 os.environ["DJANGO_CSRF_TRUSTED_ORIGINS"] = "https://seuusuario.pythonanywhere.com"
 os.environ["FIREBASE_CREDENTIALS_PATH"] = "/home/seuusuario/lojaWeb3/projetoWeb3/secrets/firebase-adminsdk.json"
+os.environ["GOOGLE_BOOKS_API_KEY"] = "sua-chave-da-google-books-api"
 ```
 
 Troque `seuusuario` pelo seu usuario real do PythonAnywhere.
@@ -70,6 +71,7 @@ os.environ["DJANGO_SECRET_KEY"] = "crie-uma-chave-secreta-grande-aqui"
 os.environ["DJANGO_ALLOWED_HOSTS"] = "seuusuario.pythonanywhere.com"
 os.environ["DJANGO_CSRF_TRUSTED_ORIGINS"] = "https://seuusuario.pythonanywhere.com"
 os.environ["FIREBASE_CREDENTIALS_PATH"] = "/home/seuusuario/lojaWeb3/projetoWeb3/secrets/firebase-adminsdk.json"
+os.environ["GOOGLE_BOOKS_API_KEY"] = "sua-chave-da-google-books-api"
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
