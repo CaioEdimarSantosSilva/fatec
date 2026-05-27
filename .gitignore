@@ -18,3 +18,11 @@ out/
 # Sistema
 .DS_Store
 Thumbs.db
+
+firebase-adminsdk*.json
+secrets/
+.env
+.env.local
+
+__pycache__/
+*.pyc

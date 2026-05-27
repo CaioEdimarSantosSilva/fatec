@@ -5,7 +5,7 @@ Este projeto ja tem os ajustes basicos para funcionar no PythonAnywhere:
 - `DEBUG` pode ser desligado com variavel de ambiente.
 - `ALLOWED_HOSTS` pode receber o dominio do PythonAnywhere.
 - `STATIC_ROOT` esta configurado para `collectstatic`.
-- O Firebase procura o `firebase.json` pelo caminho do projeto.
+- O Firebase procura o JSON em `secrets/firebase-adminsdk.json`.
 
 ## 1. Enviar o projeto
 
@@ -21,7 +21,7 @@ Se voce enviar por upload manual, mantenha esta estrutura:
 ```text
 /home/seuusuario/lojaWeb3/projetoWeb3/manage.py
 /home/seuusuario/lojaWeb3/projetoWeb3/projeto/settings.py
-/home/seuusuario/lojaWeb3/projetoWeb3/firebase.json
+/home/seuusuario/lojaWeb3/projetoWeb3/secrets/firebase-adminsdk.json
 ```
 
 ## 2. Criar o ambiente virtual
@@ -47,6 +47,7 @@ os.environ["DJANGO_DEBUG"] = "False"
 os.environ["DJANGO_SECRET_KEY"] = "crie-uma-chave-secreta-grande-aqui"
 os.environ["DJANGO_ALLOWED_HOSTS"] = "seuusuario.pythonanywhere.com"
 os.environ["DJANGO_CSRF_TRUSTED_ORIGINS"] = "https://seuusuario.pythonanywhere.com"
+os.environ["FIREBASE_CREDENTIALS_PATH"] = "/home/seuusuario/lojaWeb3/projetoWeb3/secrets/firebase-adminsdk.json"
 ```
 
 Troque `seuusuario` pelo seu usuario real do PythonAnywhere.
@@ -68,6 +69,7 @@ os.environ["DJANGO_DEBUG"] = "False"
 os.environ["DJANGO_SECRET_KEY"] = "crie-uma-chave-secreta-grande-aqui"
 os.environ["DJANGO_ALLOWED_HOSTS"] = "seuusuario.pythonanywhere.com"
 os.environ["DJANGO_CSRF_TRUSTED_ORIGINS"] = "https://seuusuario.pythonanywhere.com"
+os.environ["FIREBASE_CREDENTIALS_PATH"] = "/home/seuusuario/lojaWeb3/projetoWeb3/secrets/firebase-adminsdk.json"
 
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
@@ -106,13 +108,21 @@ Directory: /home/seuusuario/lojaWeb3/projetoWeb3/media
 
 ## 6. Firebase
 
-Confirme que o arquivo `firebase.json` esta em:
+Confirme que o arquivo `firebase-adminsdk.json` esta em:
 
 ```text
-/home/seuusuario/lojaWeb3/projetoWeb3/firebase.json
+/home/seuusuario/lojaWeb3/projetoWeb3/secrets/firebase-adminsdk.json
 ```
 
-Sem esse arquivo, as avaliacoes do Firebase nao vao carregar.
+Sem esse arquivo, as avaliacoes do Firebase nao vao carregar. A pasta `secrets/` deve ficar fora do GitHub.
+
+No Firebase Console, ative tambem o Firestore:
+
+```text
+Criar um back-end > Cloud Firestore > Criar banco de dados
+```
+
+Se o Firestore nao estiver ativo, as avaliacoes retornam erro `SERVICE_DISABLED`.
 
 ## 7. Finalizar
 
