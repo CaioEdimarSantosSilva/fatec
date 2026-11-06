@@ -34,3 +34,10 @@ db.sqlite3
 *.sqlite3
 staticfiles/
 runserver*.log
+
+# Segredos / arquivos locais
+local.properties
+google-services.json
+*.sqlite3
+secrets/
+.env
